@@ -298,7 +298,6 @@ a {
 
 .contactMe {
     width: 100%;
-    max-width: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -310,6 +309,7 @@ a {
 }
 
 .formContact {
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     padding: 20px;
