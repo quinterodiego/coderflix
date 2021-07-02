@@ -1,21 +1,21 @@
 /********** GLOBAL **********/
 
 /* VARIABLES */
-:root {
-    --main-color: #145374;
-    --secord-color: #00334e;
-    --bg-color: #f6f5f5;
-    --html: #ee6f57;
-    --css: #01ABE0;
-    --sass: #CF649A;
-    --js: #ffd15c;
-    --bootstrap: #7952B3;
-    --git: #f34c27;
-    --instagram: #DD7A9A;    
-    --whatsapp: #00BFA5;
-    --twitter: #1991DA;
-    --bg-socialNetworks: rgba(185, 185, 185, 0.5);
-}
+
+    $main-color: #145374;
+    $secord-color: #00334e;
+    $bg-color: #f6f5f5;
+    $html: #ee6f57;
+    $css: #01ABE0;
+    $sass: #CF649A;
+    $js: #ffd15c;
+    $bootstrap: #7952B3;
+    $git: #f34c27;
+    $instagram: #DD7A9A;    
+    $whatsapp: #00BFA5;
+    $twitter: #1991DA;
+    $bg-socialNetworks: rgba(185, 185, 185, 0.5);
+
 
 * {
     margin: 0;
@@ -37,23 +37,23 @@ body {
 }
 h1 {
     font-size: 40px;
-    color: var(--bg-color);
+    color: $bg-color;
 }
 
 h2 {
     font-size: 25px;
     font-weight: 300;
-    color: var(--main-color);
+    color: $main-color;
 }
 
 h3 {
     font-size: 20px;
-    color: var(--main-color);
+    color: $main-color;
 }
 
 p {
     font-size: 25px;
-    color: var(--main-color);
+    color: $main-color;
 }
 
 ul li{
@@ -63,7 +63,7 @@ ul li{
 
 a {
     text-decoration: none;
-    color: var(--bg-color);
+    color: $bg-color;
 }
 
 .content {
@@ -89,19 +89,19 @@ a {
 
 .socialNetworks ul li a i {
     font-size: 25px;
-    color: var(--bg-color);
+    color: $bg-color;
 }
 
 .instagram:hover {
-    color: var(--instagram);
+    color: $instagram;
 }
 
 .twitter:hover {
-    color: var(--twitter);
+    color: $twitter;
 }
 
 .whatsapp:hover {
-    color: var(--whatsapp);
+    color: $whatsapp;
 }
 
 /********** HEADER **********/
@@ -110,7 +110,7 @@ a {
     display: none;
 }
 .navbar {
-    background-color: var(--bg-color)!important;
+    background-color: $bg-color!important;
     padding: 10px;
     align-items: center;
     box-shadow: 0 5px #eee;
@@ -135,7 +135,7 @@ a {
 
 .navbar-toggler i {
     font-size: 25px;
-    color: var(--main-color);
+    color: $main-color;
 }
 
 .navbar ul li {
@@ -148,7 +148,7 @@ a {
     font-size: 40px;
     display: flex;
     justify-content: center;
-    color: var(--main-color)!important;
+    color: $main-color!important;
 }
 
 .navbar ul li a:hover {
@@ -157,8 +157,8 @@ a {
 
 .navbar ul li:hover a {
     width: 100%;
-    background-color: var(--bg-color);
-    color: var(--main-color);
+    background-color: $bg-color;
+    color: $main-color;
 }
 
 /********** MAIN **********/
@@ -186,7 +186,7 @@ a {
 }
 
 .main h2 {
-    color: var(--bg-color);
+    color: $bg-color;
 }
 
 .scroll-down {
@@ -199,12 +199,12 @@ a {
 
 .scroll-down p {
     font-size: 15px;
-    color: var(--bg-color);
+    color: $bg-color;
 }
 
 .scroll-down i {
     font-size: 25px;
-    color: var(--bg-color);
+    color: $bg-color;
     padding: 5px 0;
 }
 
@@ -247,7 +247,7 @@ a {
 .card-icono {
     width: 100%;
     height: 150px;
-    background-color: var(--main-color);
+    background-color: $main-color;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -261,35 +261,35 @@ a {
 }
 
 .card-icono-html {
-    color: var(--html);
+    color: $html;
 }
 
 .card-icono-css {
-    color: var(--css);
+    color: $css;
 }
 
 .card-icono-sass {
-    color: var(--sass);
+    color: $sass;
 }
 
 .card-icono-js {
-    color: var(--js);
+    color: $js;
 }
 
 .card-icono-bootstrap {
-    color: var(--bootstrap);
+    color: $bootstrap;
 }
 
 .card-icono-git {
-    color: var(--git);
+    color: $git;
 }
 
 .card-icono-rwd i {
-    color: var(--bg-color);
+    color: $bg-color;
 }
 
 .card-icono h3 {
-    color: var(--bg-color);
+    color: $bg-color;
 }
 
 /********** WORKS **********/
@@ -357,8 +357,8 @@ a {
     margin: 10px auto;
     padding: 10px 15px;
     border-radius: 8px;
-    background-color: var(--main-color);
-    color: var(--bg-color);
+    background-color: $main-color;
+    color: $bg-color;
     border: none;
     cursor: pointer;
 }
@@ -370,7 +370,7 @@ a {
 /********** FOOTER **********/
 
 .footer {
-    background-color: var(--main-color);
+    background-color: $main-color;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -378,7 +378,7 @@ a {
 }
 
 .footer p {
-    color: var(--bg-color);
+    color: $bg-color;
     font-size: 12px;
 }
 
