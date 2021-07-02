@@ -15,6 +15,8 @@
     $whatsapp: #00BFA5;
     $twitter: #1991DA;
     $bg-socialNetworks: rgba(185, 185, 185, 0.5);
+    $tablet: 991px;
+    $desktop: 1200px;
 
 
 * {
@@ -70,368 +72,374 @@ a {
     font-family: 'Dosis', sans-serif;
     overflow-y: scroll;
     scroll-behavior: smooth;
-}
 
-.socialNetworks {
-    width: 150px;
-    padding: 10px 0;
-}
+    .socialNetworks {
+        width: 150px;
+        padding: 10px 0;
 
-.socialNetworks ul {
-    display: flex;
-}
+        ul {
+            display: flex;   
+            li {
+                display: flex;
+                justify-content: center;
+                list-style: none;          
+                a {
+                    i {
+                        font-size: 25px;
+                        color: $bg-color;
+                    }
+                }
+            }
 
-.socialNetworks ul li {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
+            .instagram:hover {
+                color: $instagram;
+            }
 
-.socialNetworks ul li a i {
-    font-size: 25px;
-    color: $bg-color;
-}
+            .twitter:hover {
+                color: $twitter;
+            }
 
-.instagram:hover {
-    color: $instagram;
-}
-
-.twitter:hover {
-    color: $twitter;
-}
-
-.whatsapp:hover {
-    color: $whatsapp;
-}
-
-/********** HEADER **********/
-
-.menu-desktop {
-    display: none;
-}
-.navbar {
-    background-color: $bg-color!important;
-    padding: 10px;
-    align-items: center;
-    box-shadow: 0 5px #eee;
-}
-
-.navbar-brand {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.navbar-brand h2 {
-    font-size: 17px;
-    margin: 0;
-}
-
-.navbar-brand h3 {
-    text-align: right;
-    font-size: 10.5px;
-    margin: 0;
-}
-
-.navbar-toggler i {
-    font-size: 25px;
-    color: $main-color;
-}
-
-.navbar ul li {
-    display: flex;
-    justify-content: center;
-}
-
-.navbar ul li a {
-    padding: 20px 0;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    color: $main-color!important;
-}
-
-.navbar ul li a:hover {
-    opacity: 0.5;
-}
-
-.navbar ul li:hover a {
-    width: 100%;
-    background-color: $bg-color;
-    color: $main-color;
-}
-
-/********** MAIN **********/
-
-.main-bg {
-    height: 100vh;
-    background-image: url(./../img/cover.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.main {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.main h2 {
-    color: $bg-color;
-}
-
-.scroll-down {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    bottom: 50px;
-}
-
-.scroll-down p {
-    font-size: 15px;
-    color: $bg-color;
-}
-
-.scroll-down i {
-    font-size: 25px;
-    color: $bg-color;
-    padding: 5px 0;
-}
-
-/********** ABOUT ME **********/
-
-.about-me {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    padding: 0 10px;
-}
-
-/********** SKILLS **********/
-
-.skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.cards article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 10px;
-}
-
-.cards article p {
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 0 0 10px 10px;
-    font-size: 20px;
-}
-
-.card-icono {
-    width: 100%;
-    height: 150px;
-    background-color: $main-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px 10px 0 0;
-}
-
-.card-icono i {
-    font-size: 70px;
-    margin: 12px 5px;
-}
-
-.card-icono-html {
-    color: $html;
-}
-
-.card-icono-css {
-    color: $css;
-}
-
-.card-icono-sass {
-    color: $sass;
-}
-
-.card-icono-js {
-    color: $js;
-}
-
-.card-icono-bootstrap {
-    color: $bootstrap;
-}
-
-.card-icono-git {
-    color: $git;
-}
-
-.card-icono-rwd i {
-    color: $bg-color;
-}
-
-.card-icono h3 {
-    color: $bg-color;
-}
-
-/********** WORKS **********/
-
-.works {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/********** CONTACT ME **********/
-
-.contactMe {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.contactMe h2 {
-    text-align: center;
-}
-
-.formContact {
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 100%;
-}
-
-.dates {
-    display: flex;
-    flex-direction: column;
-}
-
-.labelInput {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.contactMe input {
-    width: 270px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    left: 100px;
-}
-
-.message {
-    padding: 10px 0;
-}
-
-.contactMe textarea {
-    width: 100%;
-    border: none;
-}
-
-.contactMe button {
-    width: 100px;
-    margin: 10px auto;
-    padding: 10px 15px;
-    border-radius: 8px;
-    background-color: $main-color;
-    color: $bg-color;
-    border: none;
-    cursor: pointer;
-}
-
-.contactMe button:hover {
-    opacity: 0.5;
-}
-
-/********** FOOTER **********/
-
-.footer {
-    background-color: $main-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.footer p {
-    color: $bg-color;
-    font-size: 12px;
-}
-
-.footer ul, .footer p {
-    margin-bottom: 0;
-}
-
-@media (min-width: 991px) {
-
-    .navbar-nav {
-        display: none;
-    }
-    
-    .navbar-toggler {
-        display: none;
+            .whatsapp:hover {
+                color: $whatsapp;
+            }
+        }
     }
 
-    .menu-desktop {
+    /********** HEADER **********/
+
+    .navbar {
+        background-color: $bg-color!important;
+        padding: 10px;
+        align-items: center;
+        box-shadow: 0 5px #eee;
+
+        @media only screen and (min-width: $desktop) {
+            justify-content: space-around;
+        }
+
+        .navbar-brand {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                font-size: 17px;
+                margin: 0;
+            }
+            
+            h3 {
+                text-align: right;
+                font-size: 10.5px;
+                margin: 0;
+            }
+        }
+
+        .navbar-toggler {
+
+            @media only screen and (min-width: $tablet) {
+                display: none;
+            }
+
+            i {
+                font-size: 25px;
+                color: $main-color;
+            }
+        }
+
+        ul {
+            li {
+                display: flex;
+                justify-content: center;
+
+                a {
+                    padding: 20px 0;
+                    font-size: 40px;
+                    display: flex;
+                    justify-content: center;
+                    color: $main-color!important;
+                }
+                a:hover {
+                    opacity: 0.5;
+                }
+            }
+            li:hover a {
+                width: 100%;
+                background-color: $bg-color;
+                color: $main-color;
+            }
+        }
+
+        .menu-desktop {
+            display: none;
+
+            @media only screen and (min-width: $tablet) {
+
+                display: flex;
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+
+                    li {
+                        margin: 0 20px;
+
+                        a {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .navbar-nav {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /********** MAIN **********/
+
+    .main-bg {
+        height: 100vh;
+        background-image: url(./../../img/cover.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
         display: flex;
+        justify-content: center;
+
+        .main-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            
+            h2 {
+                color: $bg-color;
+            }
+
+            .scroll-down {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                bottom: 90px;
+
+                p {
+                    font-size: 15px;
+                    color: $bg-color;
+                }
+
+                i {
+                    font-size: 25px;
+                    color: $bg-color;
+                    padding: 5px 0;
+                }
+            }
+        }
     }
 
-    .menu-desktop ul {
+    /********** ABOUT ME **********/
+
+    .about-me {
+        width: 100%;
+        height: 100vh;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding: 0 10px;
     }
 
-    .menu-desktop ul li {
-        margin: 0 20px;
-    }
+    /********** SKILLS **********/
 
-    .menu-desktop ul li a {
-        font-size: 20px;
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .cards {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
+
+        @media only screen and (min-width: $tablet) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            article {
+                width: 300px;
+            }
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 10px;
+            max-width: 348px;
+
+            .card-icono {
+                width: 100%;
+                height: 150px;
+                background-color: $main-color;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px 10px 0 0;
+
+                i {
+                    font-size: 70px;
+                    margin: 12px 5px;
+                }
+                
+                .card-icono-html {
+                    color: $html;
+                }
+            
+                .card-icono-css {
+                    color: $css;
+                }
+            
+                .card-icono-sass {
+                    color: $sass;
+                }
+            
+                .card-icono-js {
+                    color: $js;
+                }
+            
+                .card-icono-bootstrap {
+                    color: $bootstrap;
+                }
+            
+                .card-icono-git {
+                    color: $git;
+                }
+            
+                .card-icono-rwd i {
+                    color: $bg-color;
+                }
+                
+                h3 {
+                    color: $bg-color;
+                }
+            }
+
+            p {
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 0 0 10px 10px;
+                font-size: 20px;
+            }
+        }
     }
 
-    .cards article {
-        width: 300px;
+    /********** WORKS **********/
+
+    .works {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    /********** CONTACT ME **********/
+
+    .contactMe-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h2 {
+            text-align: center;
+        }
+
+        .formContact {
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            width: 100%;
+
+            .data-input {
+                display: flex;
+                flex-direction: column;
+
+                .label-input {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px 0;
+
+                    input {
+                        width: 270px;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: none;
+                        left: 100px;
+                    }
+                }
+            }
+
+            .message {
+                padding: 10px 0;
+
+                textarea {
+                    width: 100%;
+                    border: none;
+                }
+            }
+
+            button {
+                width: 100px;
+                margin: 10px auto;
+                padding: 10px 15px;
+                border-radius: 8px;
+                background-color: $main-color;
+                color: $bg-color;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    /********** FOOTER **********/
 
     .footer {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
+        background-color: $main-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
 
-@media (min-width: 1200px) {
-
-    .navbar {
+        @media only screen and (min-width: $tablet) {
+            flex-direction: row;
         justify-content: space-around;
+        }
+
+        p {
+            color: $bg-color;
+            font-size: 12px;
+        }
+
+        ul, p {
+            margin-bottom: 0;
+        }
     }
 }
