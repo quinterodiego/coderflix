@@ -227,11 +227,12 @@ a {
                 flex-direction: column;
                 align-items: center;
                 position: absolute;
-                bottom: 90px;
+                bottom: 40px;
 
                 p {
                     font-size: 15px;
                     color: $bg-color;
+                    margin-bottom: 0;
                 }
 
                 i {

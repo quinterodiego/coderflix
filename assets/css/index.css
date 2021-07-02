@@ -148,10 +148,11 @@ a {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        bottom: 90px; }
+        bottom: 40px; }
         .content .main-bg .main-container .scroll-down p {
           font-size: 15px;
-          color: #f6f5f5; }
+          color: #f6f5f5;
+          margin-bottom: 0; }
         .content .main-bg .main-container .scroll-down i {
           font-size: 25px;
           color: #f6f5f5;
