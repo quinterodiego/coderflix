@@ -1,26 +1,28 @@
 {
   "name": "coderflix",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss ./assets/sass/index.scss ./assets/css/index.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
-
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/quinterodiego/coderflix.git"
+  "dependencies": {
+    "framer-motion": "^11.0.0",
+    "next": "14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/quinterodiego/coderflix/issues"
-  },
-  "homepage": "https://github.com/quinterodiego/coderflix#readme",
   "devDependencies": {
-    "node-sass": "^6.0.1",
-    "nodemon": "^2.0.9"
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.1.0"
   }
 }
