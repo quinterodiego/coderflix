@@ -17,7 +17,7 @@ export function CTAFinalSection() {
         </p>
         <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a
-            href="mailto:contacto@coderflix.agency?subject=Diagn%C3%B3stico%20estrat%C3%A9gico"
+            href="mailto:coderflixarg@gmail.com?subject=Diagn%C3%B3stico%20estrat%C3%A9gico"
             className="inline-flex items-center rounded-full bg-foreground px-6 py-2.5 text-xs font-medium uppercase tracking-[0.16em] text-white transition-colors hover:bg-accent"
           >
             Agendar diagnóstico

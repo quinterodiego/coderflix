@@ -21,10 +21,10 @@ export default function HomePage() {
           </span>
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="mailto:contacto@coderflix.agency"
+              href="mailto:coderflixarg@gmail.com"
               className="hover:text-foreground"
             >
-              contacto@coderflix.agency
+              coderflixarg@gmail.com
             </a>
             <a
               href="https://wa.me/5491100000000"
