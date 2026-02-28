@@ -1,4 +1,5 @@
 import { Section } from "../layout/Section";
+import { MetodologiaDiagram } from "../ui/MetodologiaDiagram";
 
 const blocks = [
   {
@@ -34,6 +35,9 @@ export function MetodologiaCoderflixSection() {
           <p className="max-w-xl text-sm leading-relaxed text-muted sm:text-base">
             Un proceso estructurado orientado a crecimiento real.
           </p>
+        </div>
+        <div className="mb-14">
+          <MetodologiaDiagram />
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:gap-10">
           {blocks.map((block) => (

@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { PosicionamientoSection } from "@/components/sections/PosicionamientoSection";
+import { VisualSistemasSection } from "@/components/sections/VisualSistemasSection";
 import { MetodologiaCoderflixSection } from "@/components/sections/MetodologiaCoderflixSection";
 import { QueConstruimosSection } from "@/components/sections/QueConstruimosSection";
 import { ImpactoEsperadoSection } from "@/components/sections/ImpactoEsperadoSection";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <main>
         <PosicionamientoSection />
+        <VisualSistemasSection />
         <MetodologiaCoderflixSection />
         <QueConstruimosSection />
         <ImpactoEsperadoSection />
