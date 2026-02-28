@@ -7,7 +7,7 @@ const container = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.12 }
+    transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.1 }
   }
 };
 
@@ -25,7 +25,7 @@ export function Hero() {
             Coderflix
           </span>
           <span className="text-xs text-muted">
-            Consultora Estratégica de Crecimiento
+            Consultora estratégica de crecimiento digital
           </span>
         </div>
       </div>
@@ -40,7 +40,7 @@ export function Hero() {
             variants={item}
             className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl lg:leading-[1.1]"
           >
-            Infraestructura digital para empresas que quieren crecer.
+            Infraestructura digital que genera clientes, no solo presencia.
           </motion.h1>
           <span
             className="mt-6 block h-0.5 w-12 bg-accent"
@@ -50,15 +50,32 @@ export function Hero() {
             variants={item}
             className="mt-8 text-lg leading-relaxed text-muted sm:text-xl"
           >
-            No diseñamos sitios. Construimos activos digitales que impactan en
-            el negocio.
+            Diseñamos y construimos sistemas digitales estratégicos para empresas
+            que buscan escalar con estructura, métricas claras y resultados
+            medibles.
           </motion.p>
-          <motion.div variants={item} className="mt-12">
+          <motion.p
+            variants={item}
+            className="mt-4 text-sm text-muted"
+          >
+            No hacemos “páginas web”. Construimos activos digitales orientados al
+            crecimiento.
+          </motion.p>
+          <motion.div
+            variants={item}
+            className="mt-12 flex flex-wrap items-center gap-4"
+          >
             <a
               href="#contacto"
               className="inline-block rounded-lg bg-accent px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-accent-dark"
             >
-              Solicitar diagnóstico
+              Solicitar diagnóstico estratégico
+            </a>
+            <a
+              href="#metodologia"
+              className="inline-block rounded-lg border border-foreground px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-foreground transition-all duration-300 hover:bg-foreground hover:text-white"
+            >
+              Ver metodología
             </a>
           </motion.div>
         </motion.div>

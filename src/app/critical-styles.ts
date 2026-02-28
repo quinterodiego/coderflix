@@ -153,6 +153,9 @@ a:hover { color: var(--accent); }
 .rounded-lg { border-radius: 0.5rem; }
 .rounded-lg.bg-accent { color: #fff !important; background-color: var(--accent) !important; }
 .rounded-lg.bg-accent:hover { background-color: var(--accent-dark) !important; }
+.border-foreground { border-color: var(--foreground); }
+.rounded-lg.border-foreground { color: var(--foreground); background: transparent; }
+.rounded-lg.border-foreground:hover { background-color: var(--foreground); color: #fff; }
 .transition-colors { transition-property: color, background-color, border-color; }
 .transition-all { transition-property: all; }
 .duration-300 { transition-duration: 300ms; }

@@ -1,10 +1,9 @@
 import { Hero } from "@/components/sections/Hero";
-import { AutoridadSection } from "@/components/sections/Autoridad";
-import { NuestroSistemaSection } from "@/components/sections/NuestroSistemaSection";
-import { EstrategiaSection } from "@/components/sections/EstrategiaSection";
-import { ResultadosSection } from "@/components/sections/ResultadosSection";
-import { ProcesoSection } from "@/components/sections/Proceso";
-import { FiltroSection } from "@/components/sections/Filtro";
+import { PosicionamientoSection } from "@/components/sections/PosicionamientoSection";
+import { MetodologiaCoderflixSection } from "@/components/sections/MetodologiaCoderflixSection";
+import { QueConstruimosSection } from "@/components/sections/QueConstruimosSection";
+import { ImpactoEsperadoSection } from "@/components/sections/ImpactoEsperadoSection";
+import { ParaQuienTrabajamosSection } from "@/components/sections/ParaQuienTrabajamosSection";
 import { CTAFinalSection } from "@/components/sections/CTAFinal";
 
 export default function HomePage() {
@@ -12,18 +11,17 @@ export default function HomePage() {
     <>
       <Hero />
       <main>
-        <AutoridadSection />
-        <NuestroSistemaSection />
-        <EstrategiaSection />
-        <ResultadosSection />
-        <ProcesoSection />
-        <FiltroSection />
+        <PosicionamientoSection />
+        <MetodologiaCoderflixSection />
+        <QueConstruimosSection />
+        <ImpactoEsperadoSection />
+        <ParaQuienTrabajamosSection />
         <CTAFinalSection />
       </main>
       <footer className="border-t border-neutral-200 bg-white">
         <div className="container flex flex-col gap-4 py-8 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <span className="tracking-[0.18em] uppercase">
-            Coderflix — Consultora Estratégica de Crecimiento
+            Coderflix — Consultora estratégica de crecimiento digital
           </span>
           <div className="flex flex-wrap items-center gap-4">
             <a
