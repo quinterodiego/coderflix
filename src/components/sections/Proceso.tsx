@@ -27,7 +27,7 @@ export function ProcesoSection() {
   return (
     <Section id="metodologia">
       <div className="mx-auto max-w-2xl">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           Metodología
         </h2>
         <ol className="mt-12 flex flex-col gap-8 sm:gap-10">

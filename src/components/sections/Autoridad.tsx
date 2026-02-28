@@ -18,7 +18,7 @@ export function AutoridadSection() {
           <div className="space-y-6">
             <h2
               id="autoridad-title"
-              className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
+              className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
             >
               No somos una agencia más.
             </h2>

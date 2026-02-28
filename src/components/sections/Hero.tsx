@@ -21,7 +21,7 @@ export function Hero() {
     <header className="border-b border-neutral-200 bg-white">
       <div className="container">
         <div className="flex items-center justify-between py-6">
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
             Coderflix
           </span>
           <span className="text-xs text-muted">
@@ -38,10 +38,14 @@ export function Hero() {
         >
           <motion.h1
             variants={item}
-            className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl lg:leading-[1.1]"
+            className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl lg:leading-[1.1]"
           >
             Infraestructura digital para empresas que quieren crecer.
           </motion.h1>
+          <span
+            className="mt-6 block h-0.5 w-12 bg-accent"
+            aria-hidden
+          />
           <motion.p
             variants={item}
             className="mt-8 text-lg leading-relaxed text-muted sm:text-xl"
@@ -52,7 +56,7 @@ export function Hero() {
           <motion.div variants={item} className="mt-12">
             <a
               href="#contacto"
-              className="inline-block rounded-full bg-foreground px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent"
+              className="inline-block rounded-lg bg-accent px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-accent-dark"
             >
               Solicitar diagnóstico
             </a>

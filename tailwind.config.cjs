@@ -12,8 +12,9 @@ module.exports = {
         foreground: "#050608",
         muted: "#6b7280",
         accent: {
-          DEFAULT: "#0f172a",
-          soft: "#111827"
+          DEFAULT: "#7A1E2C",
+          dark: "#651823",
+          light: "#8E2A39"
         }
       },
       fontFamily: {

@@ -10,7 +10,8 @@ export const CRITICAL_CSS = `
   --neutral-200: #e5e7eb;
   --neutral-50: #f9fafb;
   --neutral-400: #a3a3a3;
-  --accent: #0f172a;
+  --accent: #7A1E2C;
+  --accent-dark: #651823;
 }
 * { box-sizing: border-box; }
 html, body {
@@ -145,10 +146,20 @@ html, body {
 .rounded-full { border-radius: 9999px; }
 /* Botones y enlaces */
 a { color: inherit; text-decoration: none; }
-a:hover { color: var(--foreground); }
+a:hover { color: var(--accent); }
 .inline-flex { display: inline-flex; }
-.rounded-full.bg-foreground { color: #fff !important; background-color: var(--foreground) !important; }
-.rounded-full.bg-foreground:hover { background-color: var(--accent) !important; }
+.text-accent { color: var(--accent); }
+.bg-accent { background-color: var(--accent); }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-lg.bg-accent { color: #fff !important; background-color: var(--accent) !important; }
+.rounded-lg.bg-accent:hover { background-color: var(--accent-dark) !important; }
+.transition-colors { transition-property: color, background-color, border-color; }
+.transition-all { transition-property: all; }
+.duration-300 { transition-duration: 300ms; }
+.h-0\\.5 { height: 0.125rem; }
+.w-12 { width: 3rem; }
+.font-bold { font-weight: 700; }
+.block { display: block; }
 .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
 .px-8 { padding-left: 2rem; padding-right: 2rem; }
 .py-4 { padding-top: 1rem; padding-bottom: 1rem; }

@@ -22,7 +22,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="mailto:coderflixarg@gmail.com"
-              className="hover:text-foreground"
+              className="transition-colors duration-300 hover:text-accent"
             >
               coderflixarg@gmail.com
             </a>
@@ -30,7 +30,7 @@ export default function HomePage() {
               href="https://wa.me/5491100000000"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-foreground"
+              className="transition-colors duration-300 hover:text-accent"
             >
               WhatsApp
             </a>
@@ -38,7 +38,7 @@ export default function HomePage() {
               href="https://www.linkedin.com"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-foreground"
+              className="transition-colors duration-300 hover:text-accent"
             >
               LinkedIn
             </a>

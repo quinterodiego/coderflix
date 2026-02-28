@@ -16,7 +16,7 @@ export function FiltroSection() {
   return (
     <Section id="con-quien">
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           Con quién trabajamos
         </h2>
         <div className="mt-12 grid gap-10 sm:grid-cols-2 sm:gap-16">
