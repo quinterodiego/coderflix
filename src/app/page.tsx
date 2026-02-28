@@ -1,7 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
-import { EnfoqueSection } from "@/components/sections/Enfoque";
+import { AutoridadSection } from "@/components/sections/Autoridad";
 import { ProcesoSection } from "@/components/sections/Proceso";
-import { ParaQuienSection } from "@/components/sections/ParaQuien";
+import { FiltroSection } from "@/components/sections/Filtro";
 import { CTAFinalSection } from "@/components/sections/CTAFinal";
 
 export default function HomePage() {
@@ -9,9 +9,9 @@ export default function HomePage() {
     <>
       <Hero />
       <main>
-        <EnfoqueSection />
+        <AutoridadSection />
         <ProcesoSection />
-        <ParaQuienSection />
+        <FiltroSection />
         <CTAFinalSection />
       </main>
       <footer className="border-t border-neutral-200 bg-white">
@@ -48,4 +48,3 @@ export default function HomePage() {
     </>
   );
 }
-
