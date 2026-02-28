@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Section } from "../layout/Section";
 
 const steps = [
@@ -23,20 +26,43 @@ const steps = [
   }
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.06, delayChildren: 0.05 }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 12 },
+  visible: { opacity: 1, y: 0 }
+};
+
 export function ProcesoSection() {
   return (
     <Section id="metodologia">
-      <div className="mx-auto max-w-2xl">
-        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+      <motion.div
+        className="mx-auto max-w-2xl"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={container}
+      >
+        <motion.h2
+          variants={item}
+          className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+        >
           Metodología
-        </h2>
+        </motion.h2>
         <ol className="mt-12 flex flex-col gap-8 sm:gap-10">
           {steps.map((step) => (
-            <li
+            <motion.li
               key={step.code}
+              variants={item}
               className="flex gap-6 border-b border-neutral-200 pb-8 last:border-0 last:pb-0 sm:gap-8"
             >
-              <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+              <span className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
                 {step.code}
               </span>
               <div className="min-w-0 flex-1">
@@ -47,10 +73,10 @@ export function ProcesoSection() {
                   {step.body}
                 </p>
               </div>
-            </li>
+            </motion.li>
           ))}
         </ol>
-      </div>
+      </motion.div>
     </Section>
   );
 }

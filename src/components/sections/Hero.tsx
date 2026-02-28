@@ -25,7 +25,7 @@ export function Hero() {
             Coderflix
           </span>
           <span className="text-xs text-muted">
-            Infraestructura digital estratégica
+            Consultora Estratégica de Crecimiento
           </span>
         </div>
       </div>

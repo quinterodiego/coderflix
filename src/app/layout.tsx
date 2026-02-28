@@ -10,14 +10,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Coderflix — Infraestructura digital estratégica",
+  title: "Coderflix — Consultora Estratégica de Crecimiento",
   description:
-    "Agencia boutique que construye activos digitales estratégicos para empresas en Argentina. Estrategia, arquitectura digital y desarrollo a medida.",
+    "Consultora estratégica de crecimiento. Diagnóstico, arquitectura digital, implementación y escalamiento para empresas que quieren crecer con datos y método.",
   metadataBase: new URL("https://coderflix.example.com"),
   openGraph: {
-    title: "Coderflix — Infraestructura digital estratégica",
+    title: "Coderflix — Consultora Estratégica de Crecimiento",
     description:
-      "Infraestructura digital pensada para escalar empresas: estrategia, arquitectura y desarrollo con foco en negocio.",
+      "Sistema de crecimiento digital: diagnóstico, arquitectura, implementación, optimización y escalamiento. Enfoque en negocio y resultados.",
     url: "https://coderflix.example.com",
     siteName: "Coderflix",
     type: "website",

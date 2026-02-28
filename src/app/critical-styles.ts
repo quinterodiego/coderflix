@@ -10,8 +10,8 @@ export const CRITICAL_CSS = `
   --neutral-200: #e5e7eb;
   --neutral-50: #f9fafb;
   --neutral-400: #a3a3a3;
-  --accent: #7A1E2C;
-  --accent-dark: #651823;
+  --accent: #059669;
+  --accent-dark: #047857;
 }
 * { box-sizing: border-box; }
 html, body {
