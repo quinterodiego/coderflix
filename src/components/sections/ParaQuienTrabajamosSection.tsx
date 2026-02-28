@@ -1,27 +1,48 @@
 import { Section } from "../layout/Section";
 
-const items = [
-  "Buscan proyectar autoridad real",
-  "Quieren dejar atrás una web improvisada",
-  "Entienden que la claridad genera confianza",
-  "Valoran una estructura pensada, no plantillas rápidas"
+const si = [
+  "Negocios que ya facturan",
+  "Empresas que quieren escalar",
+  "Marcas personales con ambición"
+];
+
+const no = [
+  "No trabajamos con proyectos sin validación",
+  "No hacemos trabajos low-budget",
+  "No competimos por precio"
 ];
 
 export function ParaQuienTrabajamosSection() {
   return (
     <Section id="para-quien">
-      <div className="mx-auto max-w-2xl space-y-8">
-        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-          Trabajamos con profesionales que:
+      <div className="mx-auto max-w-3xl">
+        <h2 className="mb-12 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+          Esto no es para todos.
         </h2>
-        <ul className="space-y-3">
-          {items.map((item) => (
-            <li key={item} className="flex gap-3 text-sm text-foreground">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-              <span className="leading-relaxed">{item}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="grid gap-12 sm:grid-cols-2">
+          <div className="space-y-4">
+            <ul className="space-y-3">
+              {si.map((item) => (
+                <li key={item} className="flex gap-3 text-sm text-foreground">
+                  <span className="mt-0.5 shrink-0 font-medium text-accent">
+                    ✔
+                  </span>
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="space-y-4">
+            <ul className="space-y-3">
+              {no.map((item) => (
+                <li key={item} className="flex gap-3 text-sm text-muted">
+                  <span className="mt-0.5 shrink-0 font-medium">✘</span>
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </Section>
   );

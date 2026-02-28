@@ -1,10 +1,10 @@
 "use client";
 
 const steps = [
-  "Evaluación",
-  "Planificación",
-  "Desarrollo",
-  "Ajustes"
+  "Diagnóstico",
+  "Diseño",
+  "Implementación",
+  "Optimización"
 ];
 
 const ACCENT = "#059669";

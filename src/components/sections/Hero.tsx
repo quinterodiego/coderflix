@@ -29,7 +29,7 @@ export function Hero() {
           </span>
         </div>
       </div>
-      <div className="container pb-28 pt-16 sm:pb-36 sm:pt-24 lg:pb-40 lg:pt-32">
+      <div className="container pb-32 pt-20 sm:pb-40 sm:pt-28 lg:pb-44 lg:pt-36">
         <motion.div
           variants={container}
           initial="hidden"
@@ -38,45 +38,37 @@ export function Hero() {
         >
           <motion.h1
             variants={item}
-            className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl lg:leading-[1.1]"
+            className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl lg:leading-[1.08]"
           >
-            Presencia digital sólida para estudios y profesionales que buscan
-            crecer.
+            Escalamos negocios digitales con estrategia, tecnología y ejecución
+            real.
           </motion.h1>
           <span
-            className="mt-6 block h-0.5 w-12 bg-accent"
+            className="mt-8 block h-0.5 w-12 bg-accent"
             aria-hidden
           />
           <motion.p
             variants={item}
             className="mt-8 text-lg leading-relaxed text-muted sm:text-xl"
           >
-            Diseñamos y estructuramos plataformas digitales que transmiten
-            autoridad, generan consultas calificadas y acompañan el crecimiento
-            profesional.
-          </motion.p>
-          <motion.p
-            variants={item}
-            className="mt-4 text-sm text-muted"
-          >
-            No se trata de tener una web. Se trata de tener una estructura
-            digital que respalde tu posicionamiento.
+            Si ya facturás y querés crecer en serio, trabajamos contigo para
+            diseñar y ejecutar el sistema digital que lo hace posible.
           </motion.p>
           <motion.div
             variants={item}
-            className="mt-12 flex flex-wrap items-center gap-4"
+            className="mt-14 flex flex-wrap items-center gap-4"
           >
             <a
               href="#contacto"
               className="inline-block rounded-lg bg-accent px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-accent-dark"
             >
-              Solicitar diagnóstico estratégico
+              Agendar Diagnóstico Estratégico
             </a>
             <a
-              href="#metodologia"
-              className="inline-block rounded-lg border border-foreground px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-foreground transition-all duration-300 hover:bg-foreground hover:text-white"
+              href="#proceso"
+              className="inline-block rounded-lg border border-neutral-300 px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-foreground transition-all duration-300 hover:border-foreground hover:bg-neutral-50"
             >
-              Conocer metodología
+              Ver cómo trabajamos
             </a>
           </motion.div>
         </motion.div>
