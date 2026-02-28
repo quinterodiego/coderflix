@@ -1,10 +1,10 @@
 import { Hero } from "@/components/sections/Hero";
-import { PosicionamientoSection } from "@/components/sections/PosicionamientoSection";
+import { ElProblemaSection } from "@/components/sections/ElProblemaSection";
+import { QueHacemosSection } from "@/components/sections/QueHacemosSection";
 import { VisualSistemasSection } from "@/components/sections/VisualSistemasSection";
 import { MetodologiaCoderflixSection } from "@/components/sections/MetodologiaCoderflixSection";
-import { QueConstruimosSection } from "@/components/sections/QueConstruimosSection";
-import { ImpactoEsperadoSection } from "@/components/sections/ImpactoEsperadoSection";
 import { ParaQuienTrabajamosSection } from "@/components/sections/ParaQuienTrabajamosSection";
+import { ImpactoEsperadoSection } from "@/components/sections/ImpactoEsperadoSection";
 import { CTAFinalSection } from "@/components/sections/CTAFinal";
 
 export default function HomePage() {
@@ -12,12 +12,12 @@ export default function HomePage() {
     <>
       <Hero />
       <main>
-        <PosicionamientoSection />
+        <ElProblemaSection />
+        <QueHacemosSection />
         <VisualSistemasSection />
         <MetodologiaCoderflixSection />
-        <QueConstruimosSection />
-        <ImpactoEsperadoSection />
         <ParaQuienTrabajamosSection />
+        <ImpactoEsperadoSection />
         <CTAFinalSection />
       </main>
       <footer className="border-t border-neutral-200 bg-white">

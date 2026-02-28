@@ -4,23 +4,23 @@ import { MetodologiaDiagram } from "../ui/MetodologiaDiagram";
 const blocks = [
   {
     number: "01",
-    title: "Diagnóstico estratégico",
-    body: "Analizamos negocio, mercado, competencia y estructura digital actual."
+    title: "Evaluación estratégica",
+    body: "Revisamos tu situación actual, mensaje y posicionamiento para definir el punto de partida."
   },
   {
     number: "02",
-    title: "Arquitectura de crecimiento",
-    body: "Definimos estructura, embudos, jerarquía de contenido y objetivos medibles."
+    title: "Planificación estructural",
+    body: "Definimos arquitectura de contenido, jerarquía y flujo orientado a claridad y conversión."
   },
   {
     number: "03",
-    title: "Construcción orientada a métricas",
-    body: "Desarrollamos infraestructura digital optimizada para conversión, rendimiento y escalabilidad."
+    title: "Desarrollo con foco en posicionamiento",
+    body: "Implementación técnica que refleja autoridad y transmite confianza."
   },
   {
     number: "04",
-    title: "Optimización continua",
-    body: "Medimos, ajustamos y refinamos en base a datos reales."
+    title: "Ajustes y mejora continua",
+    body: "Refinamos en base a datos y feedback para sostener el crecimiento."
   }
 ];
 
@@ -33,13 +33,13 @@ export function MetodologiaCoderflixSection() {
             Metodología Coderflix™
           </h2>
           <p className="max-w-xl text-sm leading-relaxed text-muted sm:text-base">
-            Un proceso estructurado orientado a crecimiento real.
+            Un proceso claro para construir presencia con fundamento.
           </p>
         </div>
         <div className="mb-14">
           <MetodologiaDiagram />
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:gap-10">
+        <div className="grid gap-10 sm:grid-cols-2 lg:gap-12">
           {blocks.map((block) => (
             <div
               key={block.number}

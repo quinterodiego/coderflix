@@ -1,10 +1,10 @@
 import { Section } from "../layout/Section";
 
 const items = [
-  "Facturan y quieren escalar con estructura",
-  "Entienden que el marketing sin sistema es ruido",
-  "Buscan claridad estratégica antes que ejecución rápida",
-  "Valoran diagnóstico antes que presupuesto inmediato"
+  "Buscan proyectar autoridad real",
+  "Quieren dejar atrás una web improvisada",
+  "Entienden que la claridad genera confianza",
+  "Valoran una estructura pensada, no plantillas rápidas"
 ];
 
 export function ParaQuienTrabajamosSection() {
@@ -12,7 +12,7 @@ export function ParaQuienTrabajamosSection() {
     <Section id="para-quien">
       <div className="mx-auto max-w-2xl space-y-8">
         <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-          Trabajamos con empresas que:
+          Trabajamos con profesionales que:
         </h2>
         <ul className="space-y-3">
           {items.map((item) => (

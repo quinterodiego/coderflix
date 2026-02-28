@@ -40,7 +40,8 @@ export function Hero() {
             variants={item}
             className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl lg:leading-[1.1]"
           >
-            Infraestructura digital que genera clientes, no solo presencia.
+            Presencia digital sólida para estudios y profesionales que buscan
+            crecer.
           </motion.h1>
           <span
             className="mt-6 block h-0.5 w-12 bg-accent"
@@ -50,16 +51,16 @@ export function Hero() {
             variants={item}
             className="mt-8 text-lg leading-relaxed text-muted sm:text-xl"
           >
-            Diseñamos y construimos sistemas digitales estratégicos para empresas
-            que buscan escalar con estructura, métricas claras y resultados
-            medibles.
+            Diseñamos y estructuramos plataformas digitales que transmiten
+            autoridad, generan consultas calificadas y acompañan el crecimiento
+            profesional.
           </motion.p>
           <motion.p
             variants={item}
             className="mt-4 text-sm text-muted"
           >
-            No hacemos “páginas web”. Construimos activos digitales orientados al
-            crecimiento.
+            No se trata de tener una web. Se trata de tener una estructura
+            digital que respalde tu posicionamiento.
           </motion.p>
           <motion.div
             variants={item}
@@ -75,7 +76,7 @@ export function Hero() {
               href="#metodologia"
               className="inline-block rounded-lg border border-foreground px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-foreground transition-all duration-300 hover:bg-foreground hover:text-white"
             >
-              Ver metodología
+              Conocer metodología
             </a>
           </motion.div>
         </motion.div>

@@ -47,8 +47,8 @@ export function VisualSistemasSection() {
             </h2>
             <p className="max-w-lg text-sm leading-relaxed text-muted sm:text-base">
               Cada proyecto se apoya en métricas de base y objetivos claros. La
-              infraestructura digital que construimos está pensada para
-              convertirse en dato, no en decoración.
+              estructura digital que construimos está pensada para transmitir
+              autoridad y generar consultas calificadas.
             </p>
             <p className="max-w-lg text-sm leading-relaxed text-muted">
               Sin medición no hay optimización. Sin datos no hay escalamiento.
