@@ -100,10 +100,10 @@ export function Hero() {
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-beige">
               <Image
                 src="/images/hero-image.png"
-                alt="Escritorio de trabajo de Diego Quintero, con notebook, cuaderno de anotaciones y café"
+                alt="Diego Quintero trabajando en su escritorio, frente a dos monitores"
                 fill
                 priority
-                className="object-cover object-[68%_38%]"
+                className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
