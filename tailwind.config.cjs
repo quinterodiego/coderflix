@@ -8,17 +8,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#f9fafb",
-        foreground: "#050608",
-        muted: "#6b7280",
-        accent: {
-          DEFAULT: "#059669",
-          dark: "#047857",
-          light: "#10b981"
-        }
+        cream: "rgb(var(--color-cream) / <alpha-value>)",
+        beige: "rgb(var(--color-beige) / <alpha-value>)",
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        line: "rgb(var(--color-line) / <alpha-value>)",
+        brand: {
+          DEFAULT: "rgb(var(--color-brand) / <alpha-value>)",
+          dark: "rgb(var(--color-brand-dark) / <alpha-value>)"
+        },
+        sun: "rgb(var(--color-sun) / <alpha-value>)"
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"]
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"]
       },
       borderRadius: {
         xl: "1.25rem"
@@ -27,4 +29,3 @@ module.exports = {
   },
   plugins: []
 };
-

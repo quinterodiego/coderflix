@@ -1,27 +1,35 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { CRITICAL_CSS } from "./critical-styles";
+import { Manrope } from "next/font/google";
+import { MotionProvider } from "@/components/MotionProvider";
 import "./globals.css";
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter"
+  variable: "--font-sans"
 });
 
+const SITE_URL = "https://diegoquintero.com.ar";
+const TITLE = "Diego Quintero | Soluciones tecnológicas";
+const DESCRIPTION =
+  "Sitios web, automatizaciones y herramientas digitales para profesionales, negocios y proyectos.";
+
 export const metadata: Metadata = {
-  title: "Consultora Estratégica de Crecimiento Digital | Coderflix",
-  description:
-    "Ayudamos a negocios que ya facturan a escalar mediante estrategia, tecnología y ejecución digital de alto impacto.",
-  metadataBase: new URL("https://coderflix.example.com"),
+  title: TITLE,
+  description: DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
   openGraph: {
-    title: "Consultora Estratégica de Crecimiento Digital | Coderflix",
-    description:
-      "Ayudamos a negocios que ya facturan a escalar mediante estrategia, tecnología y ejecución digital de alto impacto.",
-    url: "https://coderflix.example.com",
-    siteName: "Coderflix",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: "Diego Quintero",
     type: "website",
     locale: "es_AR"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION
   },
   alternates: {
     canonical: "/"
@@ -35,11 +43,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${inter.variable} page-shell`}>
-        <style dangerouslySetInnerHTML={{ __html: CRITICAL_CSS }} />
-        {children}
+      <body className={`${manrope.variable} page-shell`}>
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );
 }
-

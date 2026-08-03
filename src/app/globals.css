@@ -5,11 +5,20 @@
 @layer base {
   :root {
     color-scheme: light;
+    /* Triples RGB (sin "rgb()") para que Tailwind pueda combinarlos con opacidad, ej. bg-cream/80 */
+    --color-cream: 250 248 245;
+    --color-beige: 243 239 232;
+    --color-ink: 31 31 31;
+    --color-muted: 107 107 107;
+    --color-line: 221 215 206;
+    --color-brand: 47 79 62;
+    --color-brand-dark: 36 60 48;
+    --color-sun: 244 231 161;
   }
 
   html,
   body {
-    @apply bg-white text-foreground antialiased;
+    @apply bg-cream text-ink antialiased;
   }
 
   body {
@@ -17,21 +26,36 @@
   }
 
   ::selection {
-    @apply bg-accent text-white;
+    @apply bg-brand text-cream;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--color-brand));
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer components {
   .page-shell {
-    @apply min-h-screen bg-white text-foreground;
+    @apply min-h-screen bg-cream text-ink;
   }
 
   .section-padding {
-    @apply py-24 sm:py-32;
+    @apply py-20 sm:py-28;
   }
 
   .container {
-    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10;
   }
 }
-
