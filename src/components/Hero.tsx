@@ -29,7 +29,7 @@ export function Hero() {
             <motion.div variants={item} className="flex items-center gap-3">
               <span className="h-px w-8 bg-muted" aria-hidden />
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                Así trabajo yo
+                Sitios web · Automatizaciones · Sistemas a medida
               </span>
             </motion.div>
 
@@ -37,10 +37,10 @@ export function Hero() {
               variants={item}
               className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
             >
-              Soluciones <span className="text-brand">tecnológicas</span>{" "}
-              pensadas para{" "}
+              Herramientas <span className="text-brand">digitales</span> para
+              hacer crecer{" "}
               <span className="underline decoration-sun decoration-4 underline-offset-4">
-                tu proyecto
+                tu negocio
               </span>
               .
             </motion.h1>
@@ -49,9 +49,9 @@ export function Hero() {
               variants={item}
               className="mt-6 max-w-lg text-base leading-relaxed text-muted sm:text-lg"
             >
-              Sitios web, automatizaciones y herramientas digitales que te
-              ayudan a ahorrar tiempo, trabajar mejor y hacer crecer tu
-              proyecto.
+              Si sentís que tu forma de trabajar ya no acompaña el crecimiento
+              de tu negocio, puedo ayudarte a encontrar una solución simple,
+              útil y pensada para vos.
             </motion.p>
 
             <motion.p
