@@ -6,8 +6,6 @@ import { ArrowRight, Mouse } from "lucide-react";
 import { Container } from "./Container";
 import { getWhatsappLink } from "@/data/contact";
 
-const NOTE_ITEMS = ["Entender", "Proponer", "Resolver", "Acompañar"];
-
 const container = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } }
@@ -98,31 +96,16 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-            className="relative"
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-beige sm:aspect-[6/5] lg:aspect-[4/5]">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-beige">
               <Image
-                src="/images/diego-hero-placeholder.svg"
-                alt="Diego Quintero trabajando en su escritorio"
+                src="/images/hero-image.png"
+                alt="Escritorio de trabajo de Diego Quintero, con notebook, cuaderno de anotaciones y café"
                 fill
                 priority
-                unoptimized
-                className="object-cover"
+                className="object-cover object-[68%_38%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-            </div>
-
-            <div className="absolute -right-3 top-6 w-44 rotate-2 rounded-md border border-line bg-cream/95 p-4 shadow-sm sm:-right-6 sm:top-10 sm:w-52">
-              <ul className="space-y-1.5 text-sm font-medium text-ink">
-                {NOTE_ITEMS.map((label) => (
-                  <li key={label} className="flex items-center gap-2">
-                    <span className="text-brand" aria-hidden>
-                      ✓
-                    </span>
-                    {label}
-                  </li>
-                ))}
-              </ul>
             </div>
           </motion.div>
         </div>

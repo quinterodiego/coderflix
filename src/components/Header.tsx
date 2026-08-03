@@ -35,6 +35,10 @@ export function Header() {
       <Container className="flex h-16 items-center justify-between sm:h-20">
         <a
           href="#top"
+          onClick={(event) => {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className="text-sm font-extrabold uppercase tracking-[0.2em] text-ink"
         >
           Diego Quintero

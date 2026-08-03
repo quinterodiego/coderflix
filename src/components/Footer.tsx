@@ -1,4 +1,5 @@
-import { ArrowUp, Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
+import { BackToTopButton } from "./BackToTopButton";
 import { Container } from "./Container";
 import { GithubIcon, LinkedInIcon } from "./icons/BrandIcons";
 import { email, getWhatsappLink, githubUrl, linkedinUrl } from "@/data/contact";
@@ -57,13 +58,7 @@ export function Footer() {
             <GithubIcon size={19} />
           </a>
 
-          <a
-            href="#top"
-            aria-label="Volver arriba"
-            className="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-brand hover:text-brand"
-          >
-            <ArrowUp size={16} aria-hidden />
-          </a>
+          <BackToTopButton />
         </div>
       </Container>
     </footer>
