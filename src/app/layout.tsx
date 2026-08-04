@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { MotionProvider } from "@/components/MotionProvider";
 import "./globals.css";
 
-const manrope = Manrope({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans"
@@ -43,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${manrope.variable} page-shell`}>
+      <body className={`${plusJakartaSans.variable} page-shell`}>
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>

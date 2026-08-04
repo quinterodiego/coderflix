@@ -28,14 +28,14 @@ export function Hero() {
           >
             <motion.div variants={item} className="flex items-center gap-3">
               <span className="h-px w-8 bg-muted" aria-hidden />
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+              <span className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
                 Sitios web · Automatizaciones · Sistemas a medida
               </span>
             </motion.div>
 
             <motion.h1
               variants={item}
-              className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
+              className="mt-5 text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
             >
               Herramientas <span className="text-brand">digitales</span> para
               hacer crecer{" "}
@@ -56,7 +56,7 @@ export function Hero() {
 
             <motion.p
               variants={item}
-              className="mt-6 max-w-lg border-l-2 border-brand py-1 pl-4 text-sm font-medium leading-relaxed text-ink sm:text-base"
+              className="mt-8 max-w-lg border-l-2 border-brand py-1 pl-4 text-base italic leading-relaxed text-ink sm:text-lg"
             >
               No se trata de usar la última tecnología. Se trata de elegir la
               que tenga más sentido para vos.
@@ -72,7 +72,7 @@ export function Hero() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-cream transition-colors hover:bg-brand-dark"
               >
-                Hablemos de tu proyecto
+                Escribime, sin compromiso
                 <ArrowRight size={16} aria-hidden />
               </a>
               <a
@@ -85,7 +85,7 @@ export function Hero() {
 
             <motion.div
               variants={item}
-              className="mt-14 flex items-center gap-2 text-xs text-muted"
+              className="mt-16 flex items-center gap-2 text-xs text-muted"
             >
               <Mouse size={16} aria-hidden />
               <span>Deslizá para conocer más</span>

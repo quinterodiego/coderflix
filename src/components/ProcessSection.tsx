@@ -28,7 +28,7 @@ export function ProcessSection() {
               transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
               className="flex gap-5"
             >
-              <span className="text-3xl font-extrabold tabular-nums text-brand">
+              <span className="text-3xl font-bold tabular-nums text-brand">
                 {step.number}
               </span>
               <div>

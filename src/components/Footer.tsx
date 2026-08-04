@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="border-t border-line">
       <Container className="flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-ink">
+          <p className="text-sm font-bold uppercase tracking-[0.16em] text-ink">
             Diego Quintero
           </p>
           <p className="mt-1 text-sm text-muted">

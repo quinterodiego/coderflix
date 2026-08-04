@@ -39,7 +39,7 @@ export function Header() {
             event.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="text-sm font-extrabold uppercase tracking-[0.2em] text-ink"
+          className="text-sm font-bold uppercase tracking-[0.16em] text-ink"
         >
           Diego Quintero
         </a>

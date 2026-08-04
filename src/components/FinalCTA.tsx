@@ -29,7 +29,7 @@ export function FinalCTA() {
             rel="noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-cream px-7 py-3.5 text-sm font-semibold text-brand transition-colors hover:bg-sun"
           >
-            Hablemos de tu proyecto
+            Escribime, sin compromiso
             <ArrowRight size={16} aria-hidden />
           </a>
         </motion.div>
