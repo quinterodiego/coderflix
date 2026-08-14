@@ -36,14 +36,17 @@ export const metadata: Metadata = {
   }
 };
 
+const THEME_INIT_SCRIPT = `(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();`;
+
 export default function RootLayout({
   children
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body className={`${plusJakartaSans.variable} page-shell`}>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>

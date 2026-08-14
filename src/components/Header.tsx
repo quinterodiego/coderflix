@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Container } from "./Container";
 import { MobileMenu } from "./MobileMenu";
+import { ThemeToggle } from "./ThemeToggle";
 import { getWhatsappLink } from "@/data/contact";
 
 const NAV_LINKS = [
@@ -59,15 +60,18 @@ export function Header() {
           ))}
         </nav>
 
-        <a
-          href={whatsappHref}
-          target="_blank"
-          rel="noreferrer"
-          className="hidden items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-brand-dark md:inline-flex"
-        >
-          Hablemos
-          <ArrowRight size={16} aria-hidden />
-        </a>
+        <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-onBrand transition-colors hover:bg-brand-dark"
+          >
+            Hablemos
+            <ArrowRight size={16} aria-hidden />
+          </a>
+        </div>
 
         <MobileMenu links={NAV_LINKS} whatsappHref={whatsappHref} />
       </Container>

@@ -13,6 +13,26 @@
     --color-line: 221 215 206;
     --color-brand: 47 79 62;
     --color-brand-dark: 36 60 48;
+    /* Verde para texto/íconos directos sobre el fondo (no botones sólidos).
+       En claro es igual a --color-brand; en oscuro se aclara para mantener contraste. */
+    --color-brand-fg: 47 79 62;
+    --color-sun: 244 231 161;
+    /* Fijo, no cambia en .dark: texto/superficies claras sobre bg-brand,
+       que también es fijo. Evita que "cream" (que sí invierte) rompa
+       el contraste de los botones sólidos en modo oscuro. */
+    --color-on-brand: 250 248 245;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --color-cream: 26 24 20;
+    --color-beige: 34 31 26;
+    --color-ink: 245 241 234;
+    --color-muted: 168 160 148;
+    --color-line: 58 53 45;
+    --color-brand: 47 79 62;
+    --color-brand-dark: 36 60 48;
+    --color-brand-fg: 122 168 143;
     --color-sun: 244 231 161;
   }
 
@@ -23,10 +43,11 @@
 
   body {
     @apply font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   ::selection {
-    @apply bg-brand text-cream;
+    @apply bg-brand text-onBrand;
   }
 
   :focus-visible {

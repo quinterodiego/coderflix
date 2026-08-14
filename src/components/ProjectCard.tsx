@@ -46,7 +46,7 @@ export function ProjectCard({ project }: { project: Project }) {
               href={project.projectUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-colors hover:text-brand-dark"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-fg transition-colors hover:text-ink"
             >
               Ver proyecto
               <ArrowUpRight size={15} aria-hidden />

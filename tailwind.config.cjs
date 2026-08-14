@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,9 +16,11 @@ module.exports = {
         line: "rgb(var(--color-line) / <alpha-value>)",
         brand: {
           DEFAULT: "rgb(var(--color-brand) / <alpha-value>)",
-          dark: "rgb(var(--color-brand-dark) / <alpha-value>)"
+          dark: "rgb(var(--color-brand-dark) / <alpha-value>)",
+          fg: "rgb(var(--color-brand-fg) / <alpha-value>)"
         },
-        sun: "rgb(var(--color-sun) / <alpha-value>)"
+        sun: "rgb(var(--color-sun) / <alpha-value>)",
+        onBrand: "rgb(var(--color-on-brand) / <alpha-value>)"
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"]

@@ -47,7 +47,7 @@ export function ProblemsSection() {
               transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
               className="border-t border-line pt-6"
             >
-              <problem.icon className="text-brand" size={26} strokeWidth={1.5} aria-hidden />
+              <problem.icon className="text-brand-fg" size={26} strokeWidth={1.5} aria-hidden />
               <h3 className="mt-4 text-base font-semibold leading-snug text-ink">
                 {problem.title}
               </h3>

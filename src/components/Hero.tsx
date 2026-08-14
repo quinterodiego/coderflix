@@ -37,7 +37,7 @@ export function Hero() {
               variants={item}
               className="mt-5 text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
             >
-              Herramientas <span className="text-brand">digitales</span> para
+              Herramientas <span className="text-brand-fg">digitales</span> para
               hacer crecer{" "}
               <span className="underline decoration-sun decoration-4 underline-offset-4">
                 tu negocio
@@ -56,7 +56,7 @@ export function Hero() {
 
             <motion.p
               variants={item}
-              className="mt-8 max-w-lg border-l-2 border-brand py-1 pl-4 text-base italic leading-relaxed text-ink sm:text-lg"
+              className="mt-8 max-w-lg border-l-2 border-brand-fg py-1 pl-4 text-base italic leading-relaxed text-ink sm:text-lg"
             >
               No se trata de usar la última tecnología. Se trata de elegir la
               que tenga más sentido para vos.
@@ -70,14 +70,14 @@ export function Hero() {
                 href={getWhatsappLink()}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-cream transition-colors hover:bg-brand-dark"
+                className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-onBrand transition-colors hover:bg-brand-dark"
               >
                 Escribime, sin compromiso
                 <ArrowRight size={16} aria-hidden />
               </a>
               <a
                 href="#proyectos"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-ink underline decoration-line underline-offset-4 transition-colors hover:text-brand"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-ink underline decoration-line underline-offset-4 transition-colors hover:text-brand-fg"
               >
                 Ver proyectos
               </a>

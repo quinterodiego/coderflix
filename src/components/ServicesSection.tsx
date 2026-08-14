@@ -34,7 +34,7 @@ export function ServicesSection() {
                 transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
                 className="rounded-xl border border-line bg-cream p-7"
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-beige text-brand">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-beige text-brand-fg">
                   <Icon size={20} strokeWidth={1.75} aria-hidden />
                 </span>
                 <h3 className="mt-5 text-lg font-semibold text-ink">
@@ -49,7 +49,7 @@ export function ServicesSection() {
                       <Check
                         size={15}
                         strokeWidth={2}
-                        className="mt-0.5 shrink-0 text-brand"
+                        className="mt-0.5 shrink-0 text-brand-fg"
                         aria-hidden
                       />
                       {service}

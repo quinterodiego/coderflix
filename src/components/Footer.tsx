@@ -26,7 +26,7 @@ export function Footer() {
           <a
             href={`mailto:${email}`}
             aria-label="Enviar un email a Diego Quintero"
-            className="text-muted transition-colors hover:text-brand"
+            className="text-muted transition-colors hover:text-brand-fg"
           >
             <Mail size={19} aria-hidden />
           </a>
@@ -35,7 +35,7 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="Escribir a Diego Quintero por WhatsApp"
-            className="text-muted transition-colors hover:text-brand"
+            className="text-muted transition-colors hover:text-brand-fg"
           >
             <MessageCircle size={19} aria-hidden />
           </a>
@@ -44,7 +44,7 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="Perfil de Diego Quintero en LinkedIn"
-            className="text-muted transition-colors hover:text-brand"
+            className="text-muted transition-colors hover:text-brand-fg"
           >
             <LinkedInIcon size={19} />
           </a>
@@ -53,7 +53,7 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="Perfil de Diego Quintero en GitHub"
-            className="text-muted transition-colors hover:text-brand"
+            className="text-muted transition-colors hover:text-brand-fg"
           >
             <GithubIcon size={19} />
           </a>

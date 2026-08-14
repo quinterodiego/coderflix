@@ -8,7 +8,7 @@ export function BackToTopButton() {
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Volver arriba"
-      className="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-brand hover:text-brand"
+      className="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-brand-fg hover:text-brand-fg"
     >
       <ArrowUp size={16} aria-hidden />
     </button>

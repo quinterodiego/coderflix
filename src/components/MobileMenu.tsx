@@ -2,6 +2,7 @@
 
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 type NavLink = { href: string; label: string };
 
@@ -43,12 +44,18 @@ export function MobileMenu({ links, whatsappHref }: MobileMenuProps) {
               </a>
             ))}
           </nav>
+
+          <div className="mt-2 flex items-center justify-between border-t border-line px-3 pt-3">
+            <span className="text-sm font-medium text-muted">Tema</span>
+            <ThemeToggle />
+          </div>
+
           <a
             href={whatsappHref}
             target="_blank"
             rel="noreferrer"
             onClick={() => setOpen(false)}
-            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-cream transition-colors hover:bg-brand-dark"
+            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-onBrand transition-colors hover:bg-brand-dark"
           >
             Hablemos
             <ArrowRight size={16} aria-hidden />
