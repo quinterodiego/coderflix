@@ -6,7 +6,7 @@ export function ProjectCard({ project }: { project: Project }) {
   const isPlaceholder = !project.projectUrl && !project.caseUrl;
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl border border-line bg-cream">
+    <article className="flex flex-col overflow-hidden rounded-xl border border-line bg-cream transition-colors hover:border-brand-fg">
       <div className="relative aspect-[4/3] w-full bg-beige">
         <Image
           src={project.image}

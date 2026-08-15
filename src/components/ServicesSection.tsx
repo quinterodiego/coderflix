@@ -35,7 +35,7 @@ export function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
-                className="rounded-xl border border-line bg-cream p-7"
+                className="rounded-xl border border-line bg-cream p-7 transition-colors hover:border-brand-fg"
               >
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-beige text-brand-fg">
                   <Icon size={20} strokeWidth={1.75} aria-hidden />
