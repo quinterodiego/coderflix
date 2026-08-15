@@ -30,7 +30,10 @@ const PROBLEMS = [
 
 export function ProblemsSection() {
   return (
-    <section className="section-padding bg-beige" aria-label="Situaciones frecuentes">
+    <section
+      className="section-padding border-t border-line bg-beige"
+      aria-label="Situaciones frecuentes"
+    >
       <Container>
         <SectionHeading
           align="center"

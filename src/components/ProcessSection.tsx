@@ -9,7 +9,7 @@ export function ProcessSection() {
   return (
     <section
       id="como-trabajo"
-      className="section-padding bg-beige"
+      className="section-padding border-t border-line bg-beige"
       aria-label="Forma de trabajo"
     >
       <Container>

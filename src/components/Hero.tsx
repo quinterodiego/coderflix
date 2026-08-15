@@ -93,20 +93,19 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+            initial={{ clipPath: "inset(0 100% 0 0)" }}
+            animate={{ clipPath: "inset(0 0% 0 0)" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+            className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-beige"
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-beige">
-              <Image
-                src="/images/hero-image.png"
-                alt="Diego Quintero trabajando en su escritorio, frente a dos monitores"
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
+            <Image
+              src="/images/hero-image.png"
+              alt="Diego Quintero trabajando en su escritorio, frente a dos monitores"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </motion.div>
         </div>
       </Container>

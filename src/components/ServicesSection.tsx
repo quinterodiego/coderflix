@@ -14,7 +14,10 @@ const ICONS: Record<ServiceGroup["icon"], typeof Globe> = {
 
 export function ServicesSection() {
   return (
-    <section className="section-padding" aria-label="Qué puedo hacer por vos">
+    <section
+      className="section-padding border-t border-line"
+      aria-label="Qué puedo hacer por vos"
+    >
       <Container>
         <SectionHeading
           eyebrow="Qué puedo hacer por vos"

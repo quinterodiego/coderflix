@@ -8,7 +8,11 @@ import { projects } from "@/data/projects";
 
 export function ProjectsSection() {
   return (
-    <section id="proyectos" className="section-padding" aria-label="Proyectos destacados">
+    <section
+      id="proyectos"
+      className="section-padding border-t border-line"
+      aria-label="Proyectos destacados"
+    >
       <Container>
         <SectionHeading title="Algunos proyectos" />
 

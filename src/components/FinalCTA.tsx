@@ -7,7 +7,11 @@ import { getWhatsappLink } from "@/data/contact";
 
 export function FinalCTA() {
   return (
-    <section id="contacto" className="section-padding" aria-label="Contacto">
+    <section
+      id="contacto"
+      className="section-padding border-t border-line"
+      aria-label="Contacto"
+    >
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
