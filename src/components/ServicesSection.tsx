@@ -25,7 +25,7 @@ export function ServicesSection() {
           description="La solución puede ser una página web, una automatización o un sistema a medida. Lo importante es entender primero qué necesitás resolver."
         />
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+        <div className="mt-16 grid items-start gap-8 lg:grid-cols-3">
           {services.map((group, index) => {
             const Icon = ICONS[group.icon];
             return (
@@ -35,12 +35,12 @@ export function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
-                className="rounded-xl border border-line bg-cream p-7 transition-colors hover:border-brand-fg"
+                className={`rounded-xl border border-line bg-cream p-7 transition-colors hover:border-brand-fg ${
+                  index === 1 ? "lg:mt-10" : ""
+                }`}
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-beige text-brand-fg">
-                  <Icon size={20} strokeWidth={1.75} aria-hidden />
-                </span>
-                <h3 className="mt-5 text-lg font-semibold text-ink">
+                <Icon className="text-brand-fg" size={28} strokeWidth={1.5} aria-hidden />
+                <h3 className="mt-4 text-lg font-semibold text-ink">
                   {group.title}
                 </h3>
                 <ul className="mt-4 space-y-2.5">

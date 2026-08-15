@@ -35,7 +35,7 @@ export function Hero() {
 
             <motion.h1
               variants={item}
-              className="mt-5 text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
+              className="mt-5 font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
             >
               Herramientas <span className="text-brand-fg">digitales</span> para
               hacer crecer{" "}

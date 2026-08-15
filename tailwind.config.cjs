@@ -23,7 +23,8 @@ module.exports = {
         onBrand: "rgb(var(--color-on-brand) / <alpha-value>)"
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"]
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"]
       },
       borderRadius: {
         xl: "1.25rem"

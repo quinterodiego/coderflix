@@ -20,7 +20,7 @@ export function FinalCTA() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="mx-auto max-w-2xl rounded-2xl bg-brand px-8 py-16 text-center sm:px-16"
         >
-          <h2 className="text-2xl font-bold tracking-tight text-onBrand sm:text-3xl">
+          <h2 className="font-serif text-2xl font-semibold tracking-tight text-onBrand sm:text-3xl">
             ¿Tenés una idea o un problema que querés resolver?
           </h2>
           <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-onBrand/80 sm:text-base">
