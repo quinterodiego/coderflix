@@ -9,7 +9,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-line">
-      <Container className="flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
+      <Container className="flex flex-col gap-6 pb-24 pt-10 sm:flex-row sm:items-center sm:justify-between sm:pb-28">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-ink">
             Diego Quintero
