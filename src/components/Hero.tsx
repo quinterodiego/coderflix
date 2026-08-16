@@ -98,14 +98,14 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
             className="overflow-hidden bg-beige p-3 [border-radius:30%_70%_70%_30%/30%_30%_70%_70%]"
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden [border-radius:30%_70%_70%_30%/30%_30%_70%_70%]">
+            <div className="group relative aspect-[4/5] w-full overflow-hidden [border-radius:30%_70%_70%_30%/30%_30%_70%_70%]">
               <Image
                 src="/images/hero-image.png"
                 alt="Diego Quintero trabajando en su escritorio, frente a dos monitores"
                 fill
                 priority
                 style={{ filter: "sepia(0.18) saturate(1.08) contrast(1.03) brightness(1.03)" }}
-                className="object-cover"
+                className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
