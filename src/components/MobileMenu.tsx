@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
@@ -27,41 +28,47 @@ export function MobileMenu({ links, whatsappHref }: MobileMenuProps) {
         {open ? <X size={22} aria-hidden /> : <Menu size={22} aria-hidden />}
       </button>
 
-      {open ? (
-        <div
-          id="mobile-menu"
-          className="absolute inset-x-0 top-full border-b border-line bg-cream px-5 pb-6 pt-2 shadow-sm"
-        >
-          <nav aria-label="Navegación principal" className="flex flex-col gap-1">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-ink transition-colors hover:bg-beige"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          <div className="mt-2 flex items-center justify-between border-t border-line px-3 pt-3">
-            <span className="text-sm font-medium text-muted">Tema</span>
-            <ThemeToggle />
-          </div>
-
-          <a
-            href={whatsappHref}
-            target="_blank"
-            rel="noreferrer"
-            onClick={() => setOpen(false)}
-            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-onBrand transition-colors hover:bg-brand-dark"
+      <AnimatePresence>
+        {open ? (
+          <motion.div
+            id="mobile-menu"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute inset-x-0 top-full border-b border-line bg-cream px-5 pb-6 pt-2 shadow-sm"
           >
-            Hablemos
-            <ArrowRight size={16} aria-hidden />
-          </a>
-        </div>
-      ) : null}
+            <nav aria-label="Navegación principal" className="flex flex-col gap-1">
+              {links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-3 text-base font-medium text-ink transition-colors hover:bg-beige"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+
+            <div className="mt-2 flex items-center justify-between border-t border-line px-3 pt-3">
+              <span className="text-sm font-medium text-muted">Tema</span>
+              <ThemeToggle />
+            </div>
+
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-onBrand transition-colors hover:bg-brand-dark"
+            >
+              Hablemos
+              <ArrowRight size={16} aria-hidden />
+            </a>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </div>
   );
 }
