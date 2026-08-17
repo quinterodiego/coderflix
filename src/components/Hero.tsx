@@ -35,10 +35,13 @@ export function Hero() {
 
             <motion.h1
               variants={item}
-              className="mt-5 font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
+              className="mt-5 font-serif text-4xl font-black leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
             >
-              Herramientas <span className="text-brand-fg">digitales</span> para
-              hacer crecer{" "}
+              <span className="font-accent block font-normal italic leading-[1.1]">
+                Herramientas
+              </span>{" "}
+              <span className="text-brand-fg">digitales</span> para hacer
+              crecer{" "}
               <span className="underline decoration-sun decoration-4 underline-offset-4">
                 tu negocio
               </span>
