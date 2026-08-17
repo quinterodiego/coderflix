@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { ContactForm } from "./ContactForm";
 import { Container } from "./Container";
 import { getWhatsappLink } from "@/data/contact";
 
@@ -36,6 +37,19 @@ export function FinalCTA() {
             Escribime, sin compromiso
             <ArrowRight size={16} aria-hidden />
           </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+          className="mx-auto mt-12 max-w-md"
+        >
+          <p className="mb-6 text-center text-sm text-muted">
+            ¿Preferís escribir en vez de WhatsApp? Dejame tu mensaje acá.
+          </p>
+          <ContactForm />
         </motion.div>
       </Container>
     </section>
