@@ -1,5 +1,6 @@
 "use client";
 
+import { CheckCircle2 } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { web3FormsAccessKey } from "@/data/contact";
 
@@ -37,12 +38,18 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <p
+      <div
         role="status"
-        className="rounded-xl border border-line bg-cream p-6 text-center text-sm text-ink"
+        className="flex flex-col items-center gap-3 rounded-xl border border-line bg-cream p-6 text-center"
       >
-        ¡Gracias! Tu mensaje llegó — te respondo a la brevedad.
-      </p>
+        <CheckCircle2 className="text-brand-fg" size={28} aria-hidden />
+        <p className="text-sm text-ink">
+          <span className="font-semibold">¡Gracias! Tu mensaje llegó bien.</span>
+          <br />
+          Normalmente respondo dentro de las 24-48hs hábiles. Si es urgente,
+          escribime directamente por WhatsApp.
+        </p>
+      </div>
     );
   }
 
