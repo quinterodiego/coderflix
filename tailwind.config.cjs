@@ -24,8 +24,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)", "Georgia", "serif"],
-        accent: ["var(--font-accent)", "Georgia", "serif"]
+        serif: ["var(--font-serif)", "Georgia", "serif"]
       },
       borderRadius: {
         xl: "1.25rem"

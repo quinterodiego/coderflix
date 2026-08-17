@@ -37,37 +37,21 @@ export function Hero() {
               variants={item}
               className="mt-5 font-serif text-4xl font-black leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
             >
-              <span className="font-accent block font-normal italic leading-[1.1]">
-                Herramientas
-              </span>{" "}
-              <span className="text-brand-fg">digitales</span> para hacer
-              crecer{" "}
-              <span className="underline decoration-sun decoration-4 underline-offset-4">
-                tu negocio
-              </span>
-              .
+              Tecnología para que tu negocio funcione mejor.
             </motion.h1>
 
             <motion.p
               variants={item}
-              className="mt-6 max-w-lg text-base leading-relaxed text-muted sm:text-lg"
+              className="mt-8 max-w-lg text-base leading-relaxed text-muted sm:text-lg"
             >
-              Si sentís que tu forma de trabajar ya no acompaña el crecimiento
-              de tu negocio, puedo ayudarte a encontrar una solución simple,
-              útil y pensada para vos.
-            </motion.p>
-
-            <motion.p
-              variants={item}
-              className="mt-8 max-w-lg border-l-2 border-brand-fg py-1 pl-4 text-base italic leading-relaxed text-ink sm:text-lg"
-            >
-              No se trata de usar la última tecnología. Se trata de elegir la
-              que tenga más sentido para vos.
+              Diseño sitios web, automatizaciones y sistemas a medida para
+              resolver problemas concretos y hacer más simple tu forma de
+              trabajar.
             </motion.p>
 
             <motion.div
               variants={item}
-              className="mt-10 flex flex-wrap items-center gap-6"
+              className="mt-12 flex flex-wrap items-center gap-6"
             >
               <a
                 href={getWhatsappLink()}

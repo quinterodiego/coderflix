@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Instrument_Serif, Plus_Jakarta_Sans } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import { MotionProvider } from "@/components/MotionProvider";
 import "./globals.css";
 
@@ -15,14 +15,6 @@ const fraunces = Fraunces({
   weight: ["500", "600", "700", "900"],
   style: ["normal", "italic"],
   variable: "--font-serif"
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400"],
-  style: ["italic"],
-  variable: "--font-accent"
 });
 
 const SITE_URL = "https://diegoquintero.com.ar";
@@ -61,9 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body
-        className={`${plusJakartaSans.variable} ${fraunces.variable} ${instrumentSerif.variable} page-shell`}
-      >
+      <body className={`${plusJakartaSans.variable} ${fraunces.variable} page-shell`}>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <MotionProvider>{children}</MotionProvider>
       </body>
