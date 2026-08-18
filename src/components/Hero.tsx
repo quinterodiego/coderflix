@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, Mouse } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Container } from "./Container";
 import { getWhatsappLink } from "@/data/contact";
 
@@ -18,9 +18,13 @@ const item = {
 
 export function Hero() {
   return (
-    <section className="section-padding" aria-label="Presentación">
+    <section
+      id="hero"
+      className="section-padding pt-10 sm:pt-28"
+      aria-label="Presentación"
+    >
       <Container>
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <div className="grid gap-9 sm:gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <motion.div
             variants={container}
             initial="hidden"
@@ -35,23 +39,22 @@ export function Hero() {
 
             <motion.h1
               variants={item}
-              className="mt-5 font-serif text-4xl font-black leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
+              className="mt-5 font-serif text-[2rem] font-black leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
             >
               Tecnología para que tu negocio funcione mejor.
             </motion.h1>
 
             <motion.p
               variants={item}
-              className="mt-8 max-w-lg text-base leading-relaxed text-muted sm:text-lg"
+              className="mt-5 max-w-lg text-base leading-relaxed text-muted sm:mt-8 sm:text-lg"
             >
-              Diseño sitios web, automatizaciones y sistemas a medida para
-              resolver problemas concretos y hacer más simple tu forma de
-              trabajar.
+              Soluciones digitales simples para resolver problemas concretos
+              de tu negocio.
             </motion.p>
 
             <motion.div
               variants={item}
-              className="mt-12 flex flex-wrap items-center gap-6"
+              className="mt-6 flex flex-col items-start gap-3.5 sm:mt-12 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6"
             >
               <a
                 href={getWhatsappLink()}
@@ -69,23 +72,15 @@ export function Hero() {
                 Ver proyectos
               </a>
             </motion.div>
-
-            <motion.div
-              variants={item}
-              className="mt-16 flex items-center gap-2 text-xs text-muted"
-            >
-              <Mouse size={16} aria-hidden />
-              <span>Deslizá para conocer más</span>
-            </motion.div>
           </motion.div>
 
           <motion.div
             initial={{ clipPath: "inset(0 100% 0 0)" }}
             animate={{ clipPath: "inset(0 0% 0 0)" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-            className="overflow-hidden bg-beige p-3 [border-radius:30%_70%_70%_30%/30%_30%_70%_70%]"
+            className="mx-auto w-4/5 overflow-hidden bg-beige p-1 [border-radius:44%_56%_54%_46%/62%_40%_58%_44%] sm:mx-0 sm:w-full"
           >
-            <div className="group relative aspect-[4/5] w-full overflow-hidden [border-radius:30%_70%_70%_30%/30%_30%_70%_70%]">
+            <div className="group relative aspect-[4/5] w-full overflow-hidden [border-radius:44%_56%_54%_46%/62%_40%_58%_44%]">
               <Image
                 src="/images/hero-image.png"
                 alt="Diego Quintero trabajando en su escritorio, frente a dos monitores"
