@@ -1,44 +1,28 @@
 export type ServiceGroup = {
   icon: "presencia" | "automatizacion" | "medida";
   title: string;
-  items: string[];
+  benefit: string;
+  examples: string;
 };
 
 export const services: ServiceGroup[] = [
   {
     icon: "presencia",
     title: "Presencia digital",
-    items: [
-      "Landing pages",
-      "Sitios institucionales",
-      "Portfolios",
-      "Sitios para profesionales",
-      "Optimización de sitios existentes"
-    ]
+    benefit: "Mostrá mejor lo que hacés y convertí visitas en oportunidades.",
+    examples: "Landing pages · Sitios institucionales · Portfolios"
   },
   {
     icon: "automatizacion",
     title: "Automatización",
-    items: [
-      "Formularios",
-      "Emails automáticos",
-      "Google Sheets",
-      "Integraciones",
-      "WhatsApp",
-      "Procesos repetitivos",
-      "Notificaciones"
-    ]
+    benefit: "Ahorrá tiempo eliminando tareas manuales y repetitivas.",
+    examples: "Formularios · Integraciones · Procesos automáticos"
   },
   {
     icon: "medida",
     title: "Desarrollo a medida",
-    items: [
-      "Sistemas internos",
-      "Paneles administrativos",
-      "Herramientas para clientes",
-      "Reservas",
-      "Gestión de información",
-      "Aplicaciones web"
-    ]
+    benefit:
+      "Cuando una herramienta genérica no alcanza, construimos la que necesitás.",
+    examples: "Sistemas internos · Paneles administrativos · Aplicaciones web"
   }
 ];

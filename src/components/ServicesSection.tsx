@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Globe, Workflow, LayoutDashboard } from "lucide-react";
+import { Globe, Workflow, LayoutDashboard } from "lucide-react";
 import { motion } from "framer-motion";
 import { Container } from "./Container";
 import { SectionHeading } from "./SectionHeading";
@@ -15,7 +15,7 @@ const ICONS: Record<ServiceGroup["icon"], typeof Globe> = {
 export function ServicesSection() {
   return (
     <section
-      className="section-padding border-t border-line"
+      className="section-padding border-t border-line py-14 sm:py-20"
       aria-label="Qué puedo hacer por vos"
     >
       <Container>
@@ -25,7 +25,7 @@ export function ServicesSection() {
           description="La solución puede ser una página web, una automatización o un sistema a medida. Lo importante es entender primero qué necesitás resolver."
         />
 
-        <div className="mt-16 grid items-start gap-8 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {services.map((group, index) => {
             const Icon = ICONS[group.icon];
             return (
@@ -35,30 +35,18 @@ export function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
-                className={`rounded-xl border border-line bg-cream p-7 transition-colors hover:border-brand-fg ${
-                  index === 1 ? "lg:mt-10" : ""
-                }`}
+                className="rounded-xl border border-line p-7 transition-colors hover:border-brand-fg"
               >
                 <Icon className="text-brand-fg" size={28} strokeWidth={1.5} aria-hidden />
-                <h3 className="mt-4 text-lg font-semibold text-ink">
+                <h3 className="mt-4 text-sm font-semibold text-ink/70">
                   {group.title}
                 </h3>
-                <ul className="mt-4 space-y-2.5">
-                  {group.items.map((service) => (
-                    <li
-                      key={service}
-                      className="flex items-start gap-2.5 text-sm leading-relaxed text-muted"
-                    >
-                      <Check
-                        size={15}
-                        strokeWidth={2}
-                        className="mt-0.5 shrink-0 text-brand-fg"
-                        aria-hidden
-                      />
-                      {service}
-                    </li>
-                  ))}
-                </ul>
+                <p className="mt-3 text-base leading-relaxed text-ink">
+                  {group.benefit}
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-muted/70">
+                  {group.examples}
+                </p>
               </motion.div>
             );
           })}
