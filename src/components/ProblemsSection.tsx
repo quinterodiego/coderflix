@@ -8,22 +8,18 @@ import { SectionHeading } from "./SectionHeading";
 const PROBLEMS = [
   {
     title: "Necesitás mostrar mejor tu trabajo",
-    body: "Tu sitio actual no transmite el valor de lo que hacés.",
     icon: Monitor
   },
   {
     title: "Perdés tiempo con tareas repetitivas",
-    body: "Procesos manuales que te quitan tiempo y energía.",
     icon: Clock
   },
   {
     title: "Tenés una idea y no sabés cómo llevarla adelante",
-    body: "Sabés lo que querés lograr, pero no por dónde empezar.",
     icon: Lightbulb
   },
   {
-    title: "Tu trabajo creció, pero tus herramientas quedaron chicas",
-    body: "Necesitás herramientas que acompañen tu crecimiento.",
+    title: "Tu trabajo creció, pero tus herramientas no",
     icon: TrendingUp
   }
 ];
@@ -31,7 +27,7 @@ const PROBLEMS = [
 export function ProblemsSection() {
   return (
     <section
-      className="section-padding border-t border-line bg-beige"
+      className="section-padding border-t border-line bg-beige py-16 sm:py-[90px]"
       aria-label="Situaciones frecuentes"
     >
       <Container>
@@ -40,7 +36,7 @@ export function ProblemsSection() {
           title="Tal vez hoy estés en alguna de estas situaciones"
         />
 
-        <div className="mx-auto mt-16 grid max-w-5xl gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {PROBLEMS.map((problem, index) => (
             <motion.div
               key={problem.title}
@@ -48,15 +44,11 @@ export function ProblemsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
-              className="border-t border-line pt-6"
             >
               <problem.icon className="text-brand-fg" size={26} strokeWidth={1.5} aria-hidden />
               <h3 className="mt-4 text-base font-semibold leading-snug text-ink">
                 {problem.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {problem.body}
-              </p>
             </motion.div>
           ))}
         </div>
