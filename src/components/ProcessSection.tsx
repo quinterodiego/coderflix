@@ -9,7 +9,7 @@ export function ProcessSection() {
   return (
     <section
       id="como-trabajo"
-      className="section-padding border-t border-line bg-beige"
+      className="section-padding border-t border-line bg-beige py-16 sm:py-[90px]"
       aria-label="Forma de trabajo"
     >
       <Container>
@@ -18,7 +18,39 @@ export function ProcessSection() {
           description="No empiezo recomendando una herramienta. Primero quiero entender el problema, el objetivo y la forma en la que trabajás."
         />
 
-        <div className="mt-16 grid gap-10 sm:grid-cols-2">
+        {/* Desktop: single connected row */}
+        <div className="mt-9 hidden lg:block">
+          <div className="grid grid-cols-4 gap-8">
+            {processSteps.map((step, index) => (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
+              >
+                <div className="flex items-center">
+                  <span className="shrink-0 text-3xl font-bold leading-none tabular-nums text-brand-fg">
+                    {step.number}
+                  </span>
+                  {index < processSteps.length - 1 && (
+                    <span
+                      aria-hidden
+                      className="ml-3 -mr-8 h-px flex-1 bg-line/60"
+                    />
+                  )}
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-ink">{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {step.body}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Tablet / mobile: 2x2 grid, stacking to a single column */}
+        <div className="mt-9 grid gap-10 sm:grid-cols-2 lg:hidden">
           {processSteps.map((step, index) => (
             <motion.div
               key={step.number}

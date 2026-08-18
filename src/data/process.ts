@@ -23,6 +23,6 @@ export const processSteps: ProcessStep[] = [
   {
     number: "04",
     title: "Acompañar",
-    body: "La solución se publica, se prueba y puede seguir mejorando con el tiempo."
+    body: "Publicamos, probamos y seguimos mejorando cuando hace falta."
   }
 ];
