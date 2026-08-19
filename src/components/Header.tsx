@@ -46,10 +46,18 @@ export function Header() {
           <Image
             src="/images/brand.png"
             alt="Diego Quintero"
-            width={1979}
-            height={340}
+            width={2200}
+            height={512}
             priority
-            className="h-7 w-auto sm:h-8"
+            className="h-8 w-auto dark:hidden sm:h-10"
+          />
+          <Image
+            src="/images/brand-dark.png"
+            alt="Diego Quintero"
+            width={2200}
+            height={512}
+            priority
+            className="hidden h-8 w-auto dark:block sm:h-10"
           />
         </a>
 
