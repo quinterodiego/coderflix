@@ -39,6 +39,13 @@
   html,
   body {
     @apply bg-cream text-ink antialiased;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   body {
