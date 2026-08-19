@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Container } from "./Container";
 import { MobileMenu } from "./MobileMenu";
@@ -40,9 +41,16 @@ export function Header() {
             event.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="text-sm font-bold uppercase tracking-[0.16em] text-ink"
+          className="flex items-center"
         >
-          Diego Quintero
+          <Image
+            src="/images/brand.png"
+            alt="Diego Quintero"
+            width={1979}
+            height={340}
+            priority
+            className="h-7 w-auto sm:h-8"
+          />
         </a>
 
         <nav
