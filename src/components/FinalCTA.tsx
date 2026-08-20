@@ -10,7 +10,7 @@ export function FinalCTA() {
   return (
     <section
       id="contacto"
-      className="section-padding border-t border-line"
+      className="section-padding border-t border-line pb-16 sm:pb-20"
       aria-label="Contacto"
     >
       <Container>
