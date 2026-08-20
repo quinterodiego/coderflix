@@ -55,37 +55,39 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate={false}>
-      <div>
-        <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">
-          Nombre
-        </label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          autoComplete="name"
-          required
-          className="w-full rounded-lg border border-line bg-cream px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-brand-fg"
-        />
-      </div>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">
+            Nombre
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autoComplete="name"
+            required
+            className="w-full rounded-lg border border-line bg-cream px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-brand-fg"
+          />
+        </div>
 
-      <div>
-        <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-ink">
-          Email
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          required
-          className="w-full rounded-lg border border-line bg-cream px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-brand-fg"
-        />
+        <div>
+          <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-ink">
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            required
+            className="w-full rounded-lg border border-line bg-cream px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-brand-fg"
+          />
+        </div>
       </div>
 
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ink">
-          Contame tu proyecto
+          ¿En qué te puedo ayudar?
         </label>
         <textarea
           id="message"
@@ -113,6 +115,8 @@ export function ContactForm() {
       >
         {status === "loading" ? "Enviando..." : "Enviar mensaje"}
       </button>
+
+      <p className="text-center text-xs text-ink/70">Te respondo personalmente.</p>
 
       {status === "error" ? (
         <p role="alert" className="text-sm text-red-700">
