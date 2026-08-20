@@ -30,48 +30,50 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-5">
-          <a
-            href={`mailto:${email}`}
-            aria-label="Enviar un email a Diego Quintero"
-            className="text-onBrand/70 transition-colors hover:text-onBrand"
-          >
-            <Mail size={19} aria-hidden />
-          </a>
-          <a
-            href={getWhatsappLink()}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Escribir a Diego Quintero por WhatsApp"
-            className="text-onBrand/70 transition-colors hover:text-onBrand"
-          >
-            <MessageCircle size={19} aria-hidden />
-          </a>
-          <a
-            href={linkedinUrl}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Perfil de Diego Quintero en LinkedIn"
-            className="text-onBrand/70 transition-colors hover:text-onBrand"
-          >
-            <LinkedInIcon size={19} />
-          </a>
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Perfil de Diego Quintero en GitHub"
-            className="text-onBrand/70 transition-colors hover:text-onBrand"
-          >
-            <GithubIcon size={19} />
-          </a>
+        <div>
+          <div className="flex flex-wrap items-center gap-5">
+            <a
+              href={`mailto:${email}`}
+              aria-label="Enviar un email a Diego Quintero"
+              className="text-onBrand/70 transition-colors hover:text-onBrand"
+            >
+              <Mail size={19} aria-hidden />
+            </a>
+            <a
+              href={getWhatsappLink()}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Escribir a Diego Quintero por WhatsApp"
+              className="text-onBrand/70 transition-colors hover:text-onBrand"
+            >
+              <MessageCircle size={19} aria-hidden />
+            </a>
+            <a
+              href={linkedinUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Perfil de Diego Quintero en LinkedIn"
+              className="text-onBrand/70 transition-colors hover:text-onBrand"
+            >
+              <LinkedInIcon size={19} />
+            </a>
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Perfil de Diego Quintero en GitHub"
+              className="text-onBrand/70 transition-colors hover:text-onBrand"
+            >
+              <GithubIcon size={19} />
+            </a>
 
-          <BackToTopButton />
+            <BackToTopButton />
+          </div>
+
+          <p className="mt-3 text-xs text-onBrand/60 sm:hidden">
+            © {year} Diego Quintero. Todos los derechos reservados.
+          </p>
         </div>
-
-        <p className="text-xs text-onBrand/60 sm:hidden">
-          © {year} Diego Quintero. Todos los derechos reservados.
-        </p>
       </Container>
     </footer>
   );
