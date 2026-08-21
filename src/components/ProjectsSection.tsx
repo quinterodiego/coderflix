@@ -8,7 +8,8 @@ import { FeaturedProjectCard } from "./FeaturedProjectCard";
 import { projects } from "@/data/projects";
 
 export function ProjectsSection() {
-  const isSingleProject = projects.length === 1;
+  const featuredProject = projects.find((project) => project.featured);
+  const otherProjects = projects.filter((project) => !project.featured);
 
   return (
     <section
@@ -17,9 +18,9 @@ export function ProjectsSection() {
       aria-label="Proyectos destacados"
     >
       <Container>
-        <SectionHeading title={isSingleProject ? "Proyecto seleccionado" : "Algunos proyectos"} />
+        <SectionHeading title="Proyectos seleccionados" />
 
-        {isSingleProject ? (
+        {featuredProject ? (
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -27,11 +28,17 @@ export function ProjectsSection() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mt-16"
           >
-            <FeaturedProjectCard project={projects[0]} />
+            <FeaturedProjectCard project={featuredProject} />
           </motion.div>
-        ) : (
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, index) => (
+        ) : null}
+
+        {otherProjects.length > 0 ? (
+          <div
+            className={`grid gap-8 sm:grid-cols-2 lg:grid-cols-3 ${
+              featuredProject ? "mt-8" : "mt-16"
+            }`}
+          >
+            {otherProjects.map((project, index) => (
               <motion.div
                 key={project.slug}
                 initial={{ opacity: 0, y: 16 }}
@@ -43,7 +50,7 @@ export function ProjectsSection() {
               </motion.div>
             ))}
           </div>
-        )}
+        ) : null}
       </Container>
     </section>
   );

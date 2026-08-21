@@ -3,14 +3,12 @@ import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
-  const isPlaceholder = !project.projectUrl && !project.caseUrl;
-
   return (
     <article className="flex flex-col overflow-hidden rounded-xl border border-line bg-cream transition-colors hover:border-brand-fg">
       <div className="relative aspect-[4/3] w-full bg-beige">
         <Image
           src={project.image}
-          alt={`Vista previa del proyecto ${project.name}`}
+          alt={`Vista previa del proyecto ${project.title}`}
           fill
           unoptimized
           className="object-cover"
@@ -22,7 +20,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <span className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
           {project.category}
         </span>
-        <h3 className="mt-2 text-lg font-semibold text-ink">{project.name}</h3>
+        <h3 className="mt-2 text-lg font-semibold text-ink">{project.title}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
           {project.description}
         </p>
@@ -40,35 +38,17 @@ export function ProjectCard({ project }: { project: Project }) {
           </ul>
         ) : null}
 
-        <div className="mt-5 flex items-center gap-4">
-          {project.projectUrl ? (
-            <a
-              href={project.projectUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-fg transition-colors hover:text-ink"
-            >
-              Ver proyecto
-              <ArrowUpRight size={15} aria-hidden />
-            </a>
-          ) : null}
-          {project.caseUrl ? (
-            <a
-              href={project.caseUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition-colors hover:text-ink"
-            >
-              Ver caso
-              <ArrowUpRight size={15} aria-hidden />
-            </a>
-          ) : null}
-          {isPlaceholder ? (
-            <span className="rounded-full bg-beige px-3 py-1 text-xs font-medium text-muted">
-              Próximamente
-            </span>
-          ) : null}
-        </div>
+        {project.url ? (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-fg transition-colors hover:text-ink"
+          >
+            Ver proyecto
+            <ArrowUpRight size={15} aria-hidden />
+          </a>
+        ) : null}
       </div>
     </article>
   );

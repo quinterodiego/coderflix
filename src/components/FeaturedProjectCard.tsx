@@ -8,7 +8,7 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
       <div className="relative aspect-[4/3] w-full bg-beige lg:aspect-auto">
         <Image
           src={project.image}
-          alt={`Vista previa del proyecto ${project.name}`}
+          alt={`Vista previa del proyecto ${project.title}`}
           fill
           unoptimized
           className="object-cover"
@@ -21,7 +21,7 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
           {project.category}
         </span>
         <h3 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-          {project.name}
+          {project.title}
         </h3>
         <p className="mt-4 max-w-md text-base leading-relaxed text-muted">
           {project.description}
@@ -40,30 +40,17 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
           </ul>
         ) : null}
 
-        <div className="mt-7 flex items-center gap-4">
-          {project.projectUrl ? (
-            <a
-              href={project.projectUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-fg transition-colors hover:text-ink"
-            >
-              Ver proyecto
-              <ArrowUpRight size={15} aria-hidden />
-            </a>
-          ) : null}
-          {project.caseUrl ? (
-            <a
-              href={project.caseUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition-colors hover:text-ink"
-            >
-              Ver caso
-              <ArrowUpRight size={15} aria-hidden />
-            </a>
-          ) : null}
-        </div>
+        {project.url ? (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-fg transition-colors hover:text-ink"
+          >
+            Ver proyecto
+            <ArrowUpRight size={15} aria-hidden />
+          </a>
+        ) : null}
       </div>
     </article>
   );
