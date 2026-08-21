@@ -5,11 +5,13 @@ export type Project = {
   description: string;
   image: string;
   technologies: string[];
-  // Ausentes = proyecto placeholder (todavía sin caso real para mostrar).
   projectUrl?: string;
   caseUrl?: string;
 };
 
+// Con un solo proyecto, ProjectsSection lo muestra como featured (ver
+// FeaturedProjectCard). En cuanto haya dos o más, vuelve automáticamente
+// a la grilla con ProjectCard — no hace falta tocar el componente.
 export const projects: Project[] = [
   {
     slug: "arq-o",
@@ -21,23 +23,5 @@ export const projects: Project[] = [
     technologies: ["Next.js", "Tailwind CSS", "Vercel"],
     // TODO: reemplazar por la URL real del sitio publicado.
     projectUrl: "#"
-  },
-  {
-    slug: "proyecto-automatizacion",
-    name: "Próximo proyecto",
-    category: "Automatización",
-    description:
-      "Espacio reservado para un caso de automatización de procesos — reemplazar con un proyecto real.",
-    image: "/images/project-placeholder.svg",
-    technologies: []
-  },
-  {
-    slug: "proyecto-sistema-a-medida",
-    name: "Próximo proyecto",
-    category: "Sistema a medida",
-    description:
-      "Espacio reservado para un caso de desarrollo a medida — reemplazar con un proyecto real.",
-    image: "/images/project-placeholder.svg",
-    technologies: []
   }
 ];
