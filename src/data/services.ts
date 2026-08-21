@@ -22,7 +22,7 @@ export const services: ServiceGroup[] = [
     icon: "medida",
     title: "Desarrollo a medida",
     benefit:
-      "Cuando una herramienta genérica no alcanza, construimos la que necesitás.",
+      "Cuando una herramienta genérica no alcanza, construyo la que necesitás.",
     examples: "Sistemas internos · Paneles administrativos · Aplicaciones web"
   }
 ];
