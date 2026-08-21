@@ -62,7 +62,7 @@ export function Hero() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-onBrand transition-colors hover:bg-brand-dark"
               >
-                Escribime, sin compromiso
+                Hablemos
                 <ArrowRight size={16} aria-hidden />
               </a>
               <a
