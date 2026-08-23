@@ -7,8 +7,8 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className="flex flex-col overflow-hidden rounded-xl border border-line bg-cream transition-colors hover:border-brand-fg">
       <div className="relative aspect-[4/3] w-full bg-beige">
         <Image
-          src={project.image}
-          alt={`Vista previa del proyecto ${project.title}`}
+          src={project.images[0].src}
+          alt={project.images[0].alt}
           fill
           unoptimized
           className="object-cover"

@@ -1,20 +1,15 @@
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { ProjectGallery } from "./ProjectGallery";
 import type { Project } from "@/data/projects";
 
 export function FeaturedProjectCard({ project }: { project: Project }) {
   return (
     <article className="grid overflow-hidden rounded-xl border border-line bg-cream transition-colors hover:border-brand-fg lg:grid-cols-2">
-      <div className="relative aspect-[4/3] w-full bg-beige lg:aspect-auto">
-        <Image
-          src={project.image}
-          alt={`Vista previa del proyecto ${project.title}`}
-          fill
-          unoptimized
-          className="object-cover"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-        />
-      </div>
+      <ProjectGallery
+        images={project.images}
+        projectTitle={project.title}
+        className="relative aspect-[4/3] w-full bg-beige lg:aspect-auto"
+      />
 
       <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
         <span className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
