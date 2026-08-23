@@ -60,12 +60,13 @@ export const projects: Project[] = [
     url: "https://momentum-theta-teal.vercel.app/"
   },
   {
-    slug: "proyecto-4",
-    title: "Proyecto 4",
-    category: "Categoría",
-    description: "Breve descripción del proyecto.",
-    images: [{ src: "/images/project-placeholder.svg", alt: "Vista previa del proyecto Proyecto 4" }],
-    technologies: ["Tecnología", "Tecnología", "Tecnología"],
-    url: "#"
+    slug: "findia",
+    title: "FindIA",
+    category: "Finanzas personales",
+    description:
+      "Aplicación web para organizar deudas, comparar estrategias de pago y seguir el progreso financiero, con asistencia de IA para orientar cada decisión.",
+    images: [{ src: "/images/projects/FINDIA.png", alt: "Página principal de FindIA" }],
+    technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+    url: "https://findia.vercel.app/"
   }
 ];
