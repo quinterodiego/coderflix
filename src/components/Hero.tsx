@@ -37,20 +37,17 @@ export function Hero() {
               </span>
             </motion.div>
 
-            <motion.h1
-              variants={item}
-              className="mt-5 font-serif text-[2rem] font-black leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl"
-            >
+            {/* Título y bajada sin animación de entrada: con framer-motion
+                arrancaban en opacity 0 hasta hidratar, y en mobile el hero
+                quedaba vacío un par de segundos. */}
+            <h1 className="mt-5 font-serif text-[2rem] font-black leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-6xl">
               Tecnología para que tu negocio funcione mejor.
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              variants={item}
-              className="mt-5 max-w-lg text-base leading-relaxed text-muted sm:mt-8 sm:text-lg"
-            >
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-muted sm:mt-8 sm:text-lg">
               Soluciones digitales simples para resolver problemas concretos
               de tu negocio.
-            </motion.p>
+            </p>
 
             <motion.div
               variants={item}

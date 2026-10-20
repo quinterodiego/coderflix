@@ -9,17 +9,22 @@ export function WhatsAppFloatingButton() {
   // Hero y con el botón "Enviar mensaje" (full-width) de Contacto — se oculta
   // solo en ese rango mientras cualquiera de esas dos secciones está en
   // pantalla. Tablet/desktop no se tocan.
+  // En cualquier tamaño se oculta sobre el footer: es del mismo verde, ya tiene
+  // su propio link a WhatsApp y el botón quedaba encima de "Volver arriba".
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     const heroEl = document.getElementById("hero");
     const contactEl = document.getElementById("contacto");
+    const footerEl = document.querySelector("footer");
     const mobileQuery = window.matchMedia("(max-width: 639px)");
     if (!heroEl || !contactEl) return;
 
     let heroVisible = false;
     let contactVisible = false;
-    const update = () => setHidden(mobileQuery.matches && (heroVisible || contactVisible));
+    let footerVisible = false;
+    const update = () =>
+      setHidden(footerVisible || (mobileQuery.matches && (heroVisible || contactVisible)));
 
     const heroObserver = new IntersectionObserver(
       ([entry]) => {
@@ -39,11 +44,18 @@ export function WhatsAppFloatingButton() {
     );
     contactObserver.observe(contactEl);
 
+    const footerObserver = new IntersectionObserver(([entry]) => {
+      footerVisible = entry.isIntersecting;
+      update();
+    });
+    if (footerEl) footerObserver.observe(footerEl);
+
     mobileQuery.addEventListener("change", update);
 
     return () => {
       heroObserver.disconnect();
       contactObserver.disconnect();
+      footerObserver.disconnect();
       mobileQuery.removeEventListener("change", update);
     };
   }, []);

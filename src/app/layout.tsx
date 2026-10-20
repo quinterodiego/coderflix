@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import { MotionProvider } from "@/components/MotionProvider";
+import { email, githubUrl, linkedinUrl, whatsappNumber } from "@/data/contact";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -17,7 +18,8 @@ const fraunces = Fraunces({
   variable: "--font-serif"
 });
 
-const SITE_URL = "https://diegoquintero.com.ar";
+// Con www: el dominio sin www redirige acá, así que el canonical tiene que coincidir.
+const SITE_URL = "https://www.diegoquintero.com.ar";
 const TITLE = "Diego Quintero | Soluciones tecnológicas";
 const DESCRIPTION =
   "Sitios web, automatizaciones y herramientas digitales para profesionales, negocios y proyectos.";
@@ -44,6 +46,21 @@ export const metadata: Metadata = {
   }
 };
 
+// Datos estructurados para buscadores (schema.org).
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Diego Quintero",
+  description: DESCRIPTION,
+  url: SITE_URL,
+  image: `${SITE_URL}/images/hero-image.png`,
+  email: `mailto:${email}`,
+  telephone: `+${whatsappNumber}`,
+  areaServed: "AR",
+  sameAs: [linkedinUrl, githubUrl],
+  founder: { "@type": "Person", name: "Diego Quintero" }
+};
+
 const THEME_INIT_SCRIPT = `(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();`;
 
 export default function RootLayout({
@@ -55,6 +72,10 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <body className={`${plusJakartaSans.variable} ${fraunces.variable} page-shell`}>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+        />
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>

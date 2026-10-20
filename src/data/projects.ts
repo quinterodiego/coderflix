@@ -42,7 +42,7 @@ export const projects: Project[] = [
     title: "No Cazo Un Fulbo App",
     category: "Aplicación web",
     description:
-      "App para llevar el fútbol entre amigos a otro nivel: organización de partidos, armado de equipos, resultados, rankings y estadísticas de cada jugador..",
+      "App para llevar el fútbol entre amigos a otro nivel: organización de partidos, armado de equipos, resultados, rankings y estadísticas de cada jugador.",
     images: [
       { src: "/images/projects/No-Cazo-Un-Fulbo-App.png", alt: "Página principal de No Cazo Un Fulbo App" }
     ],
