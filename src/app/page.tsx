@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { ProblemsSection } from "@/components/ProblemsSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ProcessSection } from "@/components/ProcessSection";
+import { AboutSection } from "@/components/AboutSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
@@ -17,6 +18,7 @@ export default function HomePage() {
         <ProblemsSection />
         <ServicesSection />
         <ProcessSection />
+        <AboutSection />
         <ProjectsSection />
         <FinalCTA />
       </main>

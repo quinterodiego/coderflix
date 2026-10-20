@@ -57,6 +57,12 @@ const JSON_LD = {
   email: `mailto:${email}`,
   telephone: `+${whatsappNumber}`,
   areaServed: "AR",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Quilmes",
+    addressRegion: "Buenos Aires",
+    addressCountry: "AR"
+  },
   sameAs: [linkedinUrl, githubUrl],
   founder: { "@type": "Person", name: "Diego Quintero" }
 };

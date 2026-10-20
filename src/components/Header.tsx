@@ -11,6 +11,7 @@ import { getWhatsappLink } from "@/data/contact";
 const NAV_LINKS = [
   { href: "#proyectos", label: "Proyectos" },
   { href: "#como-trabajo", label: "Cómo trabajo" },
+  { href: "#sobre-mi", label: "Sobre mí" },
   { href: "#contacto", label: "Contacto" }
 ];
 
