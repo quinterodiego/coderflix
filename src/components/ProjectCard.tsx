@@ -21,18 +21,23 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.category}
         </span>
         <h3 className="mt-2 text-lg font-semibold text-ink">{project.title}</h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-          {project.description}
-        </p>
+        <div className="mt-2 flex-1 space-y-2 text-sm leading-relaxed text-muted">
+          <p>
+            <span className="font-semibold text-ink">Desafío.</span> {project.challenge}
+          </p>
+          <p>
+            <span className="font-semibold text-ink">Solución.</span> {project.solution}
+          </p>
+        </div>
 
-        {project.technologies.length > 0 ? (
+        {project.highlights.length > 0 ? (
           <ul className="mt-4 flex flex-wrap gap-2">
-            {project.technologies.map((tech) => (
+            {project.highlights.map((highlight) => (
               <li
-                key={tech}
+                key={highlight}
                 className="rounded-full border border-line px-2.5 py-1 text-xs text-muted"
               >
-                {tech}
+                {highlight}
               </li>
             ))}
           </ul>

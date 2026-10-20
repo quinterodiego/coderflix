@@ -19,17 +19,20 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
           {project.title}
         </h3>
         <p className="mt-4 max-w-md text-base leading-relaxed text-muted">
-          {project.description}
+          <span className="font-semibold text-ink">Desafío.</span> {project.challenge}
+        </p>
+        <p className="mt-3 max-w-md text-base leading-relaxed text-muted">
+          <span className="font-semibold text-ink">Solución.</span> {project.solution}
         </p>
 
-        {project.technologies.length > 0 ? (
+        {project.highlights.length > 0 ? (
           <ul className="mt-6 flex flex-wrap gap-2">
-            {project.technologies.map((tech) => (
+            {project.highlights.map((highlight) => (
               <li
-                key={tech}
+                key={highlight}
                 className="rounded-full border border-line px-2.5 py-1 text-xs text-muted"
               >
-                {tech}
+                {highlight}
               </li>
             ))}
           </ul>
